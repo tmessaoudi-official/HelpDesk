@@ -1,0 +1,161 @@
+.logout
+{
+	position : absolute;
+	top: 3px;
+	left: 773px;
+	height: 107px;
+	width: 231px;
+}
+.History
+{
+    position:absolute;
+    top: 9px;
+    left: -38px;
+    height: 45px;
+    width: 45px;
+    right: 225px;
+}
+.Menu1
+{
+	position:absolute;
+	top: 66px;
+	left: 147px;
+	width: 400px;
+	height: 43px;
+}
+.Contenue
+{
+	position:absolute;
+	top: 132px;
+	left: 19%;
+	width: 641px;
+	height: 1530px;
+}
+.logo
+{
+	position : absolute;
+	top: 0px;
+	left: 1px;
+	height: 118px;
+	width: 143px;
+    margin-bottom: 2px;
+}
+
+.banner
+{
+	position:absolute;
+	top: -5px;
+	left: 215px;
+	opacity:.80;
+	visibility : visible;
+	padding: 0px;
+	font-family: Courrier;
+	align: center;
+	font-size: 8pt;
+	background-image:url(../images/Bgb.jpg);
+	opacity : .75;
+	filter : alpha(opacity=75);
+	height: 119px;
+	width: 919px;
+	direction: ltr;
+	margin-bottom: 2px;
+}
+.Bottom
+{
+	position:absolute;
+	top: 770px;
+	left: 216px;
+	opacity:.80;
+	color : #FFFFFF;
+	visibility : visible;
+	padding: 0px;
+	font-family: Courrier;
+	align: center;
+	font-size: 8pt;
+	background-image:url('../images/Bgb.jpg');
+	opacity : .75;
+	filter : alpha(opacity=75);
+	height: 119px;
+	width: 919px;
+}
+
+.footer
+{
+	background-image:url(../images/Bgb.jpg);
+	position : absolute;
+	top: 80px;
+	left: 277px;
+	height: 21px;
+	width: 422px;
+	opacity:.999;
+	background-image:url(../images/Bgb.jpg);
+
+}
+/*
+   .calque{
+  opacity:.80;
+  color: #FFFFFF;
+  visibility : visible;
+  padding: 0px;
+  font-family: Courrier;
+  align: center;
+  font-size: 8pt;
+  background-color: #000000;
+  opacity : .75;
+  filter : alpha(opacity=75);
+  position :absolute;
+  top : 155px;
+  left : 0%;
+  width : 100%;
+  height : 1634px;
+    margin-right: 6px;
+}*/
+   .calque{
+	visibility : visible;
+	padding: 0px;
+	font-family: Courrier;
+	align: center;
+	font-size: 8pt;
+	position :absolute;
+	top : 135px;
+	left: 215px;
+	width: 919px;
+	height : 602px;
+	margin-right: 6px;
+	bottom: -478px;
+}
+
+.image_calque{
+	height: 100%;
+}
+
+.window{
+	visibility : visible;
+	padding: 0px;
+	font-family: Courrier;
+	align: center;
+	font-size: 8pt;
+	background-color: transparent;
+	position :absolute;
+	top : 135px;
+	left: 215px;
+	width: 919px;
+	height : 595px;
+
+}
+
+.contemp_window
+{
+    border-left-style:outset;
+    border-right-style:outset;
+    border-left-width:4PX;
+    border-right-width:4PX;
+	background-color:transparent;
+  position :absolute;
+	width: 919px;
+  height : 590px;
+  opacity:.50;
+	opacity : .75;
+	filter : alpha(opacity=75);
+	border:hidden;
+}

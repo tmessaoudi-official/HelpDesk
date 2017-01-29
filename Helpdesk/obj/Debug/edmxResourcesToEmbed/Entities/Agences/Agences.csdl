@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AgencesModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="AgencesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Adsl" EntityType="AgencesModel.Adsl" />
+    <EntitySet Name="Agences" EntityType="AgencesModel.Agences" />
+    <EntitySet Name="Emplcament" EntityType="AgencesModel.Emplcament" />
+    <EntitySet Name="Equipements" EntityType="AgencesModel.Equipements" />
+    <EntitySet Name="Framerelay" EntityType="AgencesModel.Framerelay" />
+    <EntitySet Name="Liaisons" EntityType="AgencesModel.Liaisons" />
+    <EntitySet Name="Modems" EntityType="AgencesModel.Modems" />
+    <EntitySet Name="Respnosable_Agence" EntityType="AgencesModel.Respnosable_Agence" />
+    <EntitySet Name="Routeurs" EntityType="AgencesModel.Routeurs" />
+    <EntitySet Name="Switcheurs" EntityType="AgencesModel.Switcheurs" />
+    <AssociationSet Name="FK_Liaisons_Adsl1" Association="AgencesModel.FK_Liaisons_Adsl1">
+      <End Role="Adsl" EntitySet="Adsl" />
+      <End Role="Liaisons" EntitySet="Liaisons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agences_Emplcament" Association="AgencesModel.FK_Agences_Emplcament">
+      <End Role="Emplcament" EntitySet="Emplcament" />
+      <End Role="Agences" EntitySet="Agences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agences_Equipements1" Association="AgencesModel.FK_Agences_Equipements1">
+      <End Role="Equipements" EntitySet="Equipements" />
+      <End Role="Agences" EntitySet="Agences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agences_Liaisons1" Association="AgencesModel.FK_Agences_Liaisons1">
+      <End Role="Liaisons" EntitySet="Liaisons" />
+      <End Role="Agences" EntitySet="Agences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agences_Respnosable_Agence" Association="AgencesModel.FK_Agences_Respnosable_Agence">
+      <End Role="Respnosable_Agence" EntitySet="Respnosable_Agence" />
+      <End Role="Agences" EntitySet="Agences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Equipements_Modems1" Association="AgencesModel.FK_Equipements_Modems1">
+      <End Role="Modems" EntitySet="Modems" />
+      <End Role="Equipements" EntitySet="Equipements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Equipements_Routeurs1" Association="AgencesModel.FK_Equipements_Routeurs1">
+      <End Role="Routeurs" EntitySet="Routeurs" />
+      <End Role="Equipements" EntitySet="Equipements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Equipements_Switcheurs1" Association="AgencesModel.FK_Equipements_Switcheurs1">
+      <End Role="Switcheurs" EntitySet="Switcheurs" />
+      <End Role="Equipements" EntitySet="Equipements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Liaisons_Framerelay1" Association="AgencesModel.FK_Liaisons_Framerelay1">
+      <End Role="Framerelay" EntitySet="Framerelay" />
+      <End Role="Liaisons" EntitySet="Liaisons" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Adsl">
+    <Key>
+      <PropertyRef Name="Adsl_ID" />
+    </Key>
+    <Property Name="Adsl_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Adsl_Statut" Type="Int32" Nullable="false" />
+    <Property Name="Adsl_Identificateur" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Adsl_Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Liaisons" Relationship="AgencesModel.FK_Liaisons_Adsl1" FromRole="Adsl" ToRole="Liaisons" />
+  </EntityType>
+  <EntityType Name="Agences">
+    <Key>
+      <PropertyRef Name="Agence_ID" />
+    </Key>
+    <Property Name="Agence_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Agence_Emplacement" Type="Int32" Nullable="false" />
+    <Property Name="Agence_Coordonnee_Responsable" Type="Int32" />
+    <Property Name="Agence_Equipements" Type="Int32" Nullable="false" />
+    <Property Name="Agence_Liaisons" Type="Int32" Nullable="false" />
+    <Property Name="Agence_Descriptions" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Emplcament" Relationship="AgencesModel.FK_Agences_Emplcament" FromRole="Agences" ToRole="Emplcament" />
+    <NavigationProperty Name="Equipements" Relationship="AgencesModel.FK_Agences_Equipements1" FromRole="Agences" ToRole="Equipements" />
+    <NavigationProperty Name="Liaisons" Relationship="AgencesModel.FK_Agences_Liaisons1" FromRole="Agences" ToRole="Liaisons" />
+    <NavigationProperty Name="Respnosable_Agence" Relationship="AgencesModel.FK_Agences_Respnosable_Agence" FromRole="Agences" ToRole="Respnosable_Agence" />
+  </EntityType>
+  <EntityType Name="Emplcament">
+    <Key>
+      <PropertyRef Name="Emplacement_ID" />
+    </Key>
+    <Property Name="Emplacement_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emplacement_Libelle" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Adress" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Emplacement_Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Agences" Relationship="AgencesModel.FK_Agences_Emplcament" FromRole="Emplcament" ToRole="Agences" />
+  </EntityType>
+  <EntityType Name="Equipements">
+    <Key>
+      <PropertyRef Name="Equipement_ID" />
+    </Key>
+    <Property Name="Equipement_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Equipement_Routeur" Type="Int32" Nullable="false" />
+    <Property Name="Equipement_Modem" Type="Int32" Nullable="false" />
+    <Property Name="Equipement_Switcheur" Type="Int32" Nullable="false" />
+    <Property Name="Equipement_Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Agences" Relationship="AgencesModel.FK_Agences_Equipements1" FromRole="Equipements" ToRole="Agences" />
+    <NavigationProperty Name="Modems" Relationship="AgencesModel.FK_Equipements_Modems1" FromRole="Equipements" ToRole="Modems" />
+    <NavigationProperty Name="Routeurs" Relationship="AgencesModel.FK_Equipements_Routeurs1" FromRole="Equipements" ToRole="Routeurs" />
+    <NavigationProperty Name="Switcheurs" Relationship="AgencesModel.FK_Equipements_Switcheurs1" FromRole="Equipements" ToRole="Switcheurs" />
+  </EntityType>
+  <EntityType Name="Framerelay">
+    <Key>
+      <PropertyRef Name="Framerelay_ID" />
+    </Key>
+    <Property Name="Framerelay_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Framerelay_Statut" Type="Int32" Nullable="false" />
+    <Property Name="Framerelay_Identificateur" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Framerelay_Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Liaisons" Relationship="AgencesModel.FK_Liaisons_Framerelay1" FromRole="Framerelay" ToRole="Liaisons" />
+  </EntityType>
+  <EntityType Name="Liaisons">
+    <Key>
+      <PropertyRef Name="Liaison_ID" />
+    </Key>
+    <Property Name="Liaison_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Liaison_Framerelay" Type="Int32" Nullable="false" />
+    <Property Name="Liaison_Adsl" Type="Int32" Nullable="false" />
+    <Property Name="Liaison_Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Adsl" Relationship="AgencesModel.FK_Liaisons_Adsl1" FromRole="Liaisons" ToRole="Adsl" />
+    <NavigationProperty Name="Agences" Relationship="AgencesModel.FK_Agences_Liaisons1" FromRole="Liaisons" ToRole="Agences" />
+    <NavigationProperty Name="Framerelay" Relationship="AgencesModel.FK_Liaisons_Framerelay1" FromRole="Liaisons" ToRole="Framerelay" />
+  </EntityType>
+  <EntityType Name="Modems">
+    <Key>
+      <PropertyRef Name="Modem_ID" />
+    </Key>
+    <Property Name="Modem_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Modem_Statut" Type="Int32" Nullable="false" />
+    <Property Name="Modem_Type" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Modem_IPadress" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Modem_Macadress" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Modem_Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Equipements" Relationship="AgencesModel.FK_Equipements_Modems1" FromRole="Modems" ToRole="Equipements" />
+  </EntityType>
+  <EntityType Name="Respnosable_Agence">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Prenom" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="70" Unicode="false" FixedLength="false" />
+    <Property Name="Teléphone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Agences" Relationship="AgencesModel.FK_Agences_Respnosable_Agence" FromRole="Respnosable_Agence" ToRole="Agences" />
+  </EntityType>
+  <EntityType Name="Routeurs">
+    <Key>
+      <PropertyRef Name="Routeur_ID" />
+    </Key>
+    <Property Name="Routeur_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Routeur_Statut" Type="Int32" Nullable="false" />
+    <Property Name="Routeur_Type" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Routeur_IPadress" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Routeur_Macadress" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Routeur_Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Equipements" Relationship="AgencesModel.FK_Equipements_Routeurs1" FromRole="Routeurs" ToRole="Equipements" />
+  </EntityType>
+  <EntityType Name="Switcheurs">
+    <Key>
+      <PropertyRef Name="Switcheur_ID" />
+    </Key>
+    <Property Name="Switcheur_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Switcheur_Statut" Type="Int32" Nullable="false" />
+    <Property Name="Switcheur_Type" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Switcheur_IPadress" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Switcheur_Macadress" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Switcheur_Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Equipements" Relationship="AgencesModel.FK_Equipements_Switcheurs1" FromRole="Switcheurs" ToRole="Equipements" />
+  </EntityType>
+  <Association Name="FK_Liaisons_Adsl1">
+    <End Role="Adsl" Type="AgencesModel.Adsl" Multiplicity="1" />
+    <End Role="Liaisons" Type="AgencesModel.Liaisons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adsl">
+        <PropertyRef Name="Adsl_ID" />
+      </Principal>
+      <Dependent Role="Liaisons">
+        <PropertyRef Name="Liaison_Adsl" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agences_Emplcament">
+    <End Role="Emplcament" Type="AgencesModel.Emplcament" Multiplicity="1" />
+    <End Role="Agences" Type="AgencesModel.Agences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Emplcament">
+        <PropertyRef Name="Emplacement_ID" />
+      </Principal>
+      <Dependent Role="Agences">
+        <PropertyRef Name="Agence_Emplacement" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agences_Equipements1">
+    <End Role="Equipements" Type="AgencesModel.Equipements" Multiplicity="1" />
+    <End Role="Agences" Type="AgencesModel.Agences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipements">
+        <PropertyRef Name="Equipement_ID" />
+      </Principal>
+      <Dependent Role="Agences">
+        <PropertyRef Name="Agence_Equipements" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agences_Liaisons1">
+    <End Role="Liaisons" Type="AgencesModel.Liaisons" Multiplicity="1" />
+    <End Role="Agences" Type="AgencesModel.Agences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Liaisons">
+        <PropertyRef Name="Liaison_ID" />
+      </Principal>
+      <Dependent Role="Agences">
+        <PropertyRef Name="Agence_Liaisons" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agences_Respnosable_Agence">
+    <End Role="Respnosable_Agence" Type="AgencesModel.Respnosable_Agence" Multiplicity="0..1" />
+    <End Role="Agences" Type="AgencesModel.Agences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Respnosable_Agence">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Agences">
+        <PropertyRef Name="Agence_Coordonnee_Responsable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Equipements_Modems1">
+    <End Role="Modems" Type="AgencesModel.Modems" Multiplicity="1" />
+    <End Role="Equipements" Type="AgencesModel.Equipements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modems">
+        <PropertyRef Name="Modem_ID" />
+      </Principal>
+      <Dependent Role="Equipements">
+        <PropertyRef Name="Equipement_Modem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Equipements_Routeurs1">
+    <End Role="Routeurs" Type="AgencesModel.Routeurs" Multiplicity="1" />
+    <End Role="Equipements" Type="AgencesModel.Equipements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Routeurs">
+        <PropertyRef Name="Routeur_ID" />
+      </Principal>
+      <Dependent Role="Equipements">
+        <PropertyRef Name="Equipement_Routeur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Equipements_Switcheurs1">
+    <End Role="Switcheurs" Type="AgencesModel.Switcheurs" Multiplicity="1" />
+    <End Role="Equipements" Type="AgencesModel.Equipements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Switcheurs">
+        <PropertyRef Name="Switcheur_ID" />
+      </Principal>
+      <Dependent Role="Equipements">
+        <PropertyRef Name="Equipement_Switcheur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Liaisons_Framerelay1">
+    <End Role="Framerelay" Type="AgencesModel.Framerelay" Multiplicity="1" />
+    <End Role="Liaisons" Type="AgencesModel.Liaisons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Framerelay">
+        <PropertyRef Name="Framerelay_ID" />
+      </Principal>
+      <Dependent Role="Liaisons">
+        <PropertyRef Name="Liaison_Framerelay" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

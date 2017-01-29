@@ -1,0 +1,640 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AgencesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AgencesModelStoreContainer">
+    <EntitySet Name="Agences" EntityType="AgencesModel.Store.Agences" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Equipement" EntityType="AgencesModel.Store.Equipement" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Equipement_Modems" EntityType="AgencesModel.Store.Equipement_Modems" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Equipement_Routeurs" EntityType="AgencesModel.Store.Equipement_Routeurs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Equipement_Switchers" EntityType="AgencesModel.Store.Equipement_Switchers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Historique_Login" EntityType="AgencesModel.Store.Historique_Login" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Historiques_Adsls" EntityType="AgencesModel.Store.Historiques_Adsls" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Historiques_Agences" EntityType="AgencesModel.Store.Historiques_Agences" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Historiques_Framerelays" EntityType="AgencesModel.Store.Historiques_Framerelays" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Historiques_Modems" EntityType="AgencesModel.Store.Historiques_Modems" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Historiques_Routeurs" EntityType="AgencesModel.Store.Historiques_Routeurs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Historiques_Switcheurs" EntityType="AgencesModel.Store.Historiques_Switcheurs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Liaison" EntityType="AgencesModel.Store.Liaison" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Liaison_Adsl" EntityType="AgencesModel.Store.Liaison_Adsl" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Liaison_Framerelay" EntityType="AgencesModel.Store.Liaison_Framerelay" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Responsabilité" EntityType="AgencesModel.Store.Responsabilité" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Responsables" EntityType="AgencesModel.Store.Responsables" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Zones" EntityType="AgencesModel.Store.Zones" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Adsl_inherits_Liaison" Association="AgencesModel.Store.FK_Adsl_inherits_Liaison">
+      <End Role="Liaison" EntitySet="Liaison" />
+      <End Role="Liaison_Adsl" EntitySet="Liaison_Adsl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agences_Respnosables" Association="AgencesModel.Store.FK_Agences_Respnosables">
+      <End Role="Responsables" EntitySet="Responsables" />
+      <End Role="Agences" EntitySet="Agences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agences_Zone" Association="AgencesModel.Store.FK_Agences_Zone">
+      <End Role="Zones" EntitySet="Zones" />
+      <End Role="Agences" EntitySet="Agences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Equipement_Agences" Association="AgencesModel.Store.FK_Equipement_Agences">
+      <End Role="Agences" EntitySet="Agences" />
+      <End Role="Equipement" EntitySet="Equipement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Framerelay_inherits_Liaison" Association="AgencesModel.Store.FK_Framerelay_inherits_Liaison">
+      <End Role="Liaison" EntitySet="Liaison" />
+      <End Role="Liaison_Framerelay" EntitySet="Liaison_Framerelay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Historique_Login_Respnosables" Association="AgencesModel.Store.FK_Historique_Login_Respnosables">
+      <End Role="Responsables" EntitySet="Responsables" />
+      <End Role="Historique_Login" EntitySet="Historique_Login" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Historiques_Adsls_Agences" Association="AgencesModel.Store.FK_Historiques_Adsls_Agences">
+      <End Role="Agences" EntitySet="Agences" />
+      <End Role="Historiques_Adsls" EntitySet="Historiques_Adsls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Historiques_Adsls_Liaison_Adsl" Association="AgencesModel.Store.FK_Historiques_Adsls_Liaison_Adsl">
+      <End Role="Liaison_Adsl" EntitySet="Liaison_Adsl" />
+      <End Role="Historiques_Adsls" EntitySet="Historiques_Adsls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Historiques_Agences_Agences" Association="AgencesModel.Store.FK_Historiques_Agences_Agences">
+      <End Role="Agences" EntitySet="Agences" />
+      <End Role="Historiques_Agences" EntitySet="Historiques_Agences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Historiques_Framerelays_Agences" Association="AgencesModel.Store.FK_Historiques_Framerelays_Agences">
+      <End Role="Agences" EntitySet="Agences" />
+      <End Role="Historiques_Framerelays" EntitySet="Historiques_Framerelays" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Historiques_Framerelays_Liaison_Framerelay" Association="AgencesModel.Store.FK_Historiques_Framerelays_Liaison_Framerelay">
+      <End Role="Liaison_Framerelay" EntitySet="Liaison_Framerelay" />
+      <End Role="Historiques_Framerelays" EntitySet="Historiques_Framerelays" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Historiques_Modems_Agences" Association="AgencesModel.Store.FK_Historiques_Modems_Agences">
+      <End Role="Agences" EntitySet="Agences" />
+      <End Role="Historiques_Modems" EntitySet="Historiques_Modems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Historiques_Modems_Equipement_Modems" Association="AgencesModel.Store.FK_Historiques_Modems_Equipement_Modems">
+      <End Role="Equipement_Modems" EntitySet="Equipement_Modems" />
+      <End Role="Historiques_Modems" EntitySet="Historiques_Modems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Historiques_Routeurs_Agences" Association="AgencesModel.Store.FK_Historiques_Routeurs_Agences">
+      <End Role="Agences" EntitySet="Agences" />
+      <End Role="Historiques_Routeurs" EntitySet="Historiques_Routeurs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Historiques_Routeurs_Equipement_Routeurs" Association="AgencesModel.Store.FK_Historiques_Routeurs_Equipement_Routeurs">
+      <End Role="Equipement_Routeurs" EntitySet="Equipement_Routeurs" />
+      <End Role="Historiques_Routeurs" EntitySet="Historiques_Routeurs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Historiques_Switcheurs_Agences" Association="AgencesModel.Store.FK_Historiques_Switcheurs_Agences">
+      <End Role="Agences" EntitySet="Agences" />
+      <End Role="Historiques_Switcheurs" EntitySet="Historiques_Switcheurs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Historiques_Switcheurs_Equipement_Switchers" Association="AgencesModel.Store.FK_Historiques_Switcheurs_Equipement_Switchers">
+      <End Role="Equipement_Switchers" EntitySet="Equipement_Switchers" />
+      <End Role="Historiques_Switcheurs" EntitySet="Historiques_Switcheurs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Liaison_Agences" Association="AgencesModel.Store.FK_Liaison_Agences">
+      <End Role="Agences" EntitySet="Agences" />
+      <End Role="Liaison" EntitySet="Liaison" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Modems_inherits_Equipement" Association="AgencesModel.Store.FK_Modems_inherits_Equipement">
+      <End Role="Equipement" EntitySet="Equipement" />
+      <End Role="Equipement_Modems" EntitySet="Equipement_Modems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Responsabilité_Agences" Association="AgencesModel.Store.FK_Responsabilité_Agences">
+      <End Role="Agences" EntitySet="Agences" />
+      <End Role="Responsabilité" EntitySet="Responsabilité" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Responsabilité_Responsables" Association="AgencesModel.Store.FK_Responsabilité_Responsables">
+      <End Role="Responsables" EntitySet="Responsables" />
+      <End Role="Responsabilité" EntitySet="Responsabilité" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Routeurs_inherits_Equipement" Association="AgencesModel.Store.FK_Routeurs_inherits_Equipement">
+      <End Role="Equipement" EntitySet="Equipement" />
+      <End Role="Equipement_Routeurs" EntitySet="Equipement_Routeurs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Switchers_inherits_Equipement" Association="AgencesModel.Store.FK_Switchers_inherits_Equipement">
+      <End Role="Equipement" EntitySet="Equipement" />
+      <End Role="Equipement_Switchers" EntitySet="Equipement_Switchers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Agences">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Adresse_IP" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Nom" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Zone" Type="int" Nullable="false" />
+    <Property Name="Adresse" Type="varchar(max)" Nullable="false" />
+    <Property Name="Responsable" Type="int" Nullable="false" />
+    <Property Name="Descriptions" Type="varchar(max)" />
+    <Property Name="Equipement_Description" Type="varchar(max)" />
+    <Property Name="Liaison_Description" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Equipement">
+    <Key>
+      <PropertyRef Name="ID_Equipement" />
+    </Key>
+    <Property Name="Agence_ID" Type="int" Nullable="false" />
+    <Property Name="ID_Equipement" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Etat" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Type" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Model" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Equipement_Modems">
+    <Key>
+      <PropertyRef Name="ID_Equipement" />
+    </Key>
+    <Property Name="ID_Equipement" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Equipement_Routeurs">
+    <Key>
+      <PropertyRef Name="ID_Equipement" />
+    </Key>
+    <Property Name="Adresse_IP" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Adresse_MAC" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ID_Equipement" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Equipement_Switchers">
+    <Key>
+      <PropertyRef Name="ID_Equipement" />
+    </Key>
+    <Property Name="Adresse_IP" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Adresse_MAC" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ID_Equipement" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Historique_Login">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID_User" Type="int" />
+    <Property Name="Hostname" Type="varchar" MaxLength="50" />
+    <Property Name="IPAdresse" Type="varchar" MaxLength="50" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Time" Type="time" Precision="0" />
+  </EntityType>
+  <EntityType Name="Historiques_Adsls">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Adsl_ID" Type="int" Nullable="false" />
+    <Property Name="Etat_Tunnel" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Etat_Carte" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Adresse_Tunnel" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Adresse_Carte" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Time" Type="time" Nullable="false" Precision="0" />
+    <Property Name="Personnel" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Agence_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Historiques_Agences">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Agence_ID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Adresse_IP" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Nom" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Zone" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Adresse" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Equipement_Description" Type="varchar(max)" />
+    <Property Name="Liaison_Description" Type="varchar(max)" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Time" Type="time" Nullable="false" Precision="0" />
+    <Property Name="Personnel" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Historiques_Framerelays">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Framerelay_ID" Type="int" Nullable="false" />
+    <Property Name="Etat" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Adresse_IP" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Time" Type="time" Nullable="false" Precision="0" />
+    <Property Name="Personnel" Type="varchar" MaxLength="50" />
+    <Property Name="Agence_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Historiques_Modems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Modem_ID" Type="int" Nullable="false" />
+    <Property Name="Etat" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Type" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Model" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Time" Type="time" Nullable="false" Precision="0" />
+    <Property Name="Personnel" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Agence_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Historiques_Routeurs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Routeur_ID" Type="int" Nullable="false" />
+    <Property Name="Etat" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Type" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Model" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Adresse_IP" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Adresse_MAC" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Time" Type="time" Nullable="false" Precision="0" />
+    <Property Name="Personnel" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Agence_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Historiques_Switcheurs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Switcheur_ID" Type="int" Nullable="false" />
+    <Property Name="Etat" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Type" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Model" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Adresse_IP" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Adresse_MAC" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Time" Type="time" Nullable="false" Precision="0" />
+    <Property Name="Personnel" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Agence_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Liaison">
+    <Key>
+      <PropertyRef Name="ID_Liaison" />
+    </Key>
+    <Property Name="ID_Liaison" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Etat" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Adresse_IP" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Agence_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Liaison_Adsl">
+    <Key>
+      <PropertyRef Name="ID_Liaison" />
+    </Key>
+    <Property Name="Etat_Carte" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Adresse_Carte" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ID_Liaison" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Liaison_Framerelay">
+    <Key>
+      <PropertyRef Name="ID_Liaison" />
+    </Key>
+    <Property Name="ID_Liaison" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Responsabilité">
+    <Key>
+      <PropertyRef Name="Agence_ID" />
+      <PropertyRef Name="Responsable_ID" />
+      <PropertyRef Name="DateDebut" />
+      <PropertyRef Name="TimeDebut" />
+    </Key>
+    <Property Name="Agence_ID" Type="int" Nullable="false" />
+    <Property Name="Responsable_ID" Type="int" Nullable="false" />
+    <Property Name="DateDebut" Type="date" Nullable="false" />
+    <Property Name="TimeDebut" Type="time" Nullable="false" Precision="0" />
+    <Property Name="DateFin" Type="date" />
+    <Property Name="TimeFin" Type="time" Precision="0" />
+    <Property Name="Personnel" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Responsables">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="varchar" MaxLength="50" />
+    <Property Name="Prenom" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="70" />
+    <Property Name="Teléphone" Type="varchar" MaxLength="50" />
+    <Property Name="Niveau" Type="int" />
+    <Property Name="Role" Type="int" />
+    <Property Name="Username" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Zones">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Libelle" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar(max)" />
+  </EntityType>
+  <Association Name="FK_Adsl_inherits_Liaison">
+    <End Role="Liaison" Type="AgencesModel.Store.Liaison" Multiplicity="1" />
+    <End Role="Liaison_Adsl" Type="AgencesModel.Store.Liaison_Adsl" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Liaison">
+        <PropertyRef Name="ID_Liaison" />
+      </Principal>
+      <Dependent Role="Liaison_Adsl">
+        <PropertyRef Name="ID_Liaison" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agences_Respnosables">
+    <End Role="Responsables" Type="AgencesModel.Store.Responsables" Multiplicity="1" />
+    <End Role="Agences" Type="AgencesModel.Store.Agences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Responsables">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Agences">
+        <PropertyRef Name="Responsable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agences_Zone">
+    <End Role="Zones" Type="AgencesModel.Store.Zones" Multiplicity="1" />
+    <End Role="Agences" Type="AgencesModel.Store.Agences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zones">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Agences">
+        <PropertyRef Name="Zone" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Equipement_Agences">
+    <End Role="Agences" Type="AgencesModel.Store.Agences" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Equipement" Type="AgencesModel.Store.Equipement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agences">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Equipement">
+        <PropertyRef Name="Agence_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Framerelay_inherits_Liaison">
+    <End Role="Liaison" Type="AgencesModel.Store.Liaison" Multiplicity="1" />
+    <End Role="Liaison_Framerelay" Type="AgencesModel.Store.Liaison_Framerelay" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Liaison">
+        <PropertyRef Name="ID_Liaison" />
+      </Principal>
+      <Dependent Role="Liaison_Framerelay">
+        <PropertyRef Name="ID_Liaison" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Historique_Login_Respnosables">
+    <End Role="Responsables" Type="AgencesModel.Store.Responsables" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Historique_Login" Type="AgencesModel.Store.Historique_Login" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Responsables">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Historique_Login">
+        <PropertyRef Name="ID_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Historiques_Adsls_Agences">
+    <End Role="Agences" Type="AgencesModel.Store.Agences" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Historiques_Adsls" Type="AgencesModel.Store.Historiques_Adsls" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agences">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Historiques_Adsls">
+        <PropertyRef Name="Agence_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Historiques_Adsls_Liaison_Adsl">
+    <End Role="Liaison_Adsl" Type="AgencesModel.Store.Liaison_Adsl" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Historiques_Adsls" Type="AgencesModel.Store.Historiques_Adsls" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Liaison_Adsl">
+        <PropertyRef Name="ID_Liaison" />
+      </Principal>
+      <Dependent Role="Historiques_Adsls">
+        <PropertyRef Name="Adsl_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Historiques_Agences_Agences">
+    <End Role="Agences" Type="AgencesModel.Store.Agences" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Historiques_Agences" Type="AgencesModel.Store.Historiques_Agences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agences">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Historiques_Agences">
+        <PropertyRef Name="Agence_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Historiques_Framerelays_Agences">
+    <End Role="Agences" Type="AgencesModel.Store.Agences" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Historiques_Framerelays" Type="AgencesModel.Store.Historiques_Framerelays" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agences">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Historiques_Framerelays">
+        <PropertyRef Name="Agence_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Historiques_Framerelays_Liaison_Framerelay">
+    <End Role="Liaison_Framerelay" Type="AgencesModel.Store.Liaison_Framerelay" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Historiques_Framerelays" Type="AgencesModel.Store.Historiques_Framerelays" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Liaison_Framerelay">
+        <PropertyRef Name="ID_Liaison" />
+      </Principal>
+      <Dependent Role="Historiques_Framerelays">
+        <PropertyRef Name="Framerelay_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Historiques_Modems_Agences">
+    <End Role="Agences" Type="AgencesModel.Store.Agences" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Historiques_Modems" Type="AgencesModel.Store.Historiques_Modems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agences">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Historiques_Modems">
+        <PropertyRef Name="Agence_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Historiques_Modems_Equipement_Modems">
+    <End Role="Equipement_Modems" Type="AgencesModel.Store.Equipement_Modems" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Historiques_Modems" Type="AgencesModel.Store.Historiques_Modems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipement_Modems">
+        <PropertyRef Name="ID_Equipement" />
+      </Principal>
+      <Dependent Role="Historiques_Modems">
+        <PropertyRef Name="Modem_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Historiques_Routeurs_Agences">
+    <End Role="Agences" Type="AgencesModel.Store.Agences" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Historiques_Routeurs" Type="AgencesModel.Store.Historiques_Routeurs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agences">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Historiques_Routeurs">
+        <PropertyRef Name="Agence_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Historiques_Routeurs_Equipement_Routeurs">
+    <End Role="Equipement_Routeurs" Type="AgencesModel.Store.Equipement_Routeurs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Historiques_Routeurs" Type="AgencesModel.Store.Historiques_Routeurs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipement_Routeurs">
+        <PropertyRef Name="ID_Equipement" />
+      </Principal>
+      <Dependent Role="Historiques_Routeurs">
+        <PropertyRef Name="Routeur_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Historiques_Switcheurs_Agences">
+    <End Role="Agences" Type="AgencesModel.Store.Agences" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Historiques_Switcheurs" Type="AgencesModel.Store.Historiques_Switcheurs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agences">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Historiques_Switcheurs">
+        <PropertyRef Name="Agence_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Historiques_Switcheurs_Equipement_Switchers">
+    <End Role="Equipement_Switchers" Type="AgencesModel.Store.Equipement_Switchers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Historiques_Switcheurs" Type="AgencesModel.Store.Historiques_Switcheurs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipement_Switchers">
+        <PropertyRef Name="ID_Equipement" />
+      </Principal>
+      <Dependent Role="Historiques_Switcheurs">
+        <PropertyRef Name="Switcheur_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Liaison_Agences">
+    <End Role="Agences" Type="AgencesModel.Store.Agences" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Liaison" Type="AgencesModel.Store.Liaison" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agences">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Liaison">
+        <PropertyRef Name="Agence_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Modems_inherits_Equipement">
+    <End Role="Equipement" Type="AgencesModel.Store.Equipement" Multiplicity="1" />
+    <End Role="Equipement_Modems" Type="AgencesModel.Store.Equipement_Modems" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Equipement">
+        <PropertyRef Name="ID_Equipement" />
+      </Principal>
+      <Dependent Role="Equipement_Modems">
+        <PropertyRef Name="ID_Equipement" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Responsabilité_Agences">
+    <End Role="Agences" Type="AgencesModel.Store.Agences" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Responsabilité" Type="AgencesModel.Store.Responsabilité" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agences">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Responsabilité">
+        <PropertyRef Name="Agence_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Responsabilité_Responsables">
+    <End Role="Responsables" Type="AgencesModel.Store.Responsables" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Responsabilité" Type="AgencesModel.Store.Responsabilité" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Responsables">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Responsabilité">
+        <PropertyRef Name="Responsable_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Routeurs_inherits_Equipement">
+    <End Role="Equipement" Type="AgencesModel.Store.Equipement" Multiplicity="1" />
+    <End Role="Equipement_Routeurs" Type="AgencesModel.Store.Equipement_Routeurs" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Equipement">
+        <PropertyRef Name="ID_Equipement" />
+      </Principal>
+      <Dependent Role="Equipement_Routeurs">
+        <PropertyRef Name="ID_Equipement" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Switchers_inherits_Equipement">
+    <End Role="Equipement" Type="AgencesModel.Store.Equipement" Multiplicity="1" />
+    <End Role="Equipement_Switchers" Type="AgencesModel.Store.Equipement_Switchers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Equipement">
+        <PropertyRef Name="ID_Equipement" />
+      </Principal>
+      <Dependent Role="Equipement_Switchers">
+        <PropertyRef Name="ID_Equipement" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

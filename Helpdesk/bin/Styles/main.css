@@ -1,0 +1,10 @@
+﻿.msg_button_class
+         {
+         background-image : url(../images/msg_button_1.jpg);
+         font-family : Tahoma;
+         font-size : 11px;
+         font-weight : bold;
+         color : #FFFFFF;
+         border : 1px solid #DDDDDD;
+         height :22px;
+         }

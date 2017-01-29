@@ -1,0 +1,58 @@
+﻿/* WIZARD */
+.stepNotCompleted
+{
+    background-color: rgb(153,153,153);
+    width: 15px;
+    border: 1px solid rgb(153,153,153);
+    margin-right: 5px;
+    color: White;
+    font-family: Arial;
+    font-size: 12px;
+    text-align: center;
+}
+
+.stepCompleted
+{
+    background-color: #4d4d4d;
+    width: 15px;
+    border: 1px solid #4d4d4d;
+    color: White;
+    font-family: Arial;
+    font-size: 12px;
+    text-align: center;
+}
+
+.stepCurrent
+{
+    background-color: #e01122;
+    width: 15px;
+    border: 1px solid #e01122;
+    color: White;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.stepBreak
+{
+    width: 3px;
+    background-color: Transparent;
+}
+
+.wizardProgress
+{
+    padding-right: 10px;
+    font-family: Arial;
+    color: #333333;
+    font-size: 12px;
+
+}
+
+.wizardTitle
+{
+    font-family: Arial;
+    font-size: 120%;
+    font-weight: bold;
+    color: #333333;
+    vertical-align: middle;

@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HelpDesk.Default" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Account\Default.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.forgot" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABQAABAAAIAAAAgAAAAACAAAAAAAAAAAAAAAAIAFAE=</HashCode>
+      <FileName>Account\forgot.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Login" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BABQAABAAAAIAAAgAAAAACEAAAAgAAAAAAAAAgoABAA=</HashCode>
+      <FileName>Account\Login.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Logout" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Account\Logout.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Historiques" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Historiques.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Insert" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAZAAMAgNCAYgIABAQEgAIDD/UgAoESQBAApKAAA=</HashCode>
+      <FileName>Insert.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Responsable" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAEAAAAAAgAAAAAAAAAAAAAAAAAIAAAAMAAAA=</HashCode>
+      <FileName>Responsable.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Update" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAZAAMAgdCAYgIABAQEgAKDD/UgAoEaQBAApKAAA=</HashCode>
+      <FileName>Update.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Agences.AgenceEntities" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEADAASzAUAAAQAEAAIAAASAAAggBIAAQOQAAIgAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Agences.Adsl" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IACAAAAADAAEAQAUAAAAAACAAAABBAYAAAAAADCAQAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Agences.Agences" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEAAAAAAAhAAEAQAQEAIAAMAAE0mVAAAIAYAAgABEAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Agences.Emplcament" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAYAAAAEAAAAAEAAAEEAARAQAAAAACCAAAAAAAAEAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Agences.Equipements" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIBAAAgFBQAAAAAAEACIBOQAUAAAQGCAACAEQAgCAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Agences.Framerelay" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAJAAACAADAACAABQAABBABAAQAAAACCCAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Agences.Liaisons" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAgAAAgwgABAyAAAAACAEWAgAEEAAAAAAAAQAAQAAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Agences.Modems" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACACAAAAAACAABEgCAIIAhgBAgAACAUAAQQAYIAADE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Agences.Routeurs" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAADICQBFACAAAAFQIAAAAgAACAIkAEIQgAgAAQAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Agences.Switcheurs" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIAAASCAABAQAgBIASABAAAAABBCAAQAJASAAiAQAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Historiques.HistoriquesEntities" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAQAQIAgAAAAAQBAI4AABAAADiMAACgAQIQAAYA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Historiques.Historique_Adsl" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAggAABQgCgwIDCkEAFCAAAhAAACiCAEFGA0REiAAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Historiques.Historique_Agences" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AG4AUEABAJlrREAAQECQAEAEAJCIAIAAAJZAQAkAAAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Historiques.Historique_Equipements" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gpARGQAAKQiAgIAAAQAQEBAABUAAFaBACM5QgggEECA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Historiques.Historique_FrameRelay" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAgACAQ4rQgAAiQAAAACCQCDBACAIEIAEAASACArYQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Historiques.Historique_Liaison" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFGgEAgMQBgAQAAJAAAAgIABCVAAhWEBASCiABgQAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Historiques.Historique_Modem" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CYQgPCIWCJAAEECAKQIEAIJdAVJFgABhgABQIVSAAhg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Historiques.Historique_Routeur" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oBAASAFXAKAQBMAFAgCHQAGUIQQAjSFAIAAgkCiBAYQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Historiques.Historique_Switcheur" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAkECYsQZAGgEGEAYAQRBARDlgRAABSlCBwAooA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Users.UsersEntities" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAIAAIAAECAEAAAAAYAIAgAAACIAEAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Users.Role" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAACAAEAAIgAAAAAAEAAAAAAAAAACAABAAAAAUAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Users.Sessions" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAIgAAgEQAAQIEAAAUAAAIAAACABAAAAAEAAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Users.sysdiagrams" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASICAMAABEIAAAIAAggAAQFIAFUAAAAAAAAQAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Entities.Users.Users" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMARACAAQiACkEQCFUIECAAUCCEIAAACADQAAAAkAAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Utilitaire.Databases.Scripts" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAgAAAAAEQAAAAgAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Old_App_Code\Databases\Scripts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Utilitaire.Encryption.AESEncryption" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Old_App_Code\Encryption\AESEncryption.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Old_App_Code.Encryption.DESEncryption" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAQAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Old_App_Code\Encryption\DESEncryption.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Utilitaire.Mail.Scripts" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Old_App_Code\Mail\Scripts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MessageBox" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAgAEAAEAAAEAQACAAAIAAAgAACAAQAAAAIAAAQI=</HashCode>
+      <FileName>Old_App_Code\MessageBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MessageBoxButton" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAgAAAAAAAACAI=</HashCode>
+      <FileName>Old_App_Code\MessageBoxButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpDesk.Utilitaire.Utilites" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAIAAQAA=</HashCode>
+      <FileName>Old_App_Code\Utilites.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

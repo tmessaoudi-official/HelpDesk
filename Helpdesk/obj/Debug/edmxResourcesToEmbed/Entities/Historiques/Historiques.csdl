@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HistoriquesModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="HistoriquesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Historique_Adsl" EntityType="HistoriquesModel.Historique_Adsl" />
+    <EntitySet Name="Historique_Agences" EntityType="HistoriquesModel.Historique_Agences" />
+    <EntitySet Name="Historique_Equipements" EntityType="HistoriquesModel.Historique_Equipements" />
+    <EntitySet Name="Historique_FrameRelay" EntityType="HistoriquesModel.Historique_FrameRelay" />
+    <EntitySet Name="Historique_Liaison" EntityType="HistoriquesModel.Historique_Liaison" />
+    <EntitySet Name="Historique_Modem" EntityType="HistoriquesModel.Historique_Modem" />
+    <EntitySet Name="Historique_Routeur" EntityType="HistoriquesModel.Historique_Routeur" />
+    <EntitySet Name="Historique_Switcheur" EntityType="HistoriquesModel.Historique_Switcheur" />
+    <AssociationSet Name="FK_Historique_Liaison_Historique_Adsl" Association="HistoriquesModel.FK_Historique_Liaison_Historique_Adsl">
+      <End Role="Historique_Adsl" EntitySet="Historique_Adsl" />
+      <End Role="Historique_Liaison" EntitySet="Historique_Liaison" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Historique_Agences_Historique_Equipements" Association="HistoriquesModel.FK_Historique_Agences_Historique_Equipements">
+      <End Role="Historique_Equipements" EntitySet="Historique_Equipements" />
+      <End Role="Historique_Agences" EntitySet="Historique_Agences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Historique_Agences_Historique_Liaison" Association="HistoriquesModel.FK_Historique_Agences_Historique_Liaison">
+      <End Role="Historique_Liaison" EntitySet="Historique_Liaison" />
+      <End Role="Historique_Agences" EntitySet="Historique_Agences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Historique_Equipements_Historique_Modem" Association="HistoriquesModel.FK_Historique_Equipements_Historique_Modem">
+      <End Role="Historique_Modem" EntitySet="Historique_Modem" />
+      <End Role="Historique_Equipements" EntitySet="Historique_Equipements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Historique_Equipements_Historique_Routeur" Association="HistoriquesModel.FK_Historique_Equipements_Historique_Routeur">
+      <End Role="Historique_Routeur" EntitySet="Historique_Routeur" />
+      <End Role="Historique_Equipements" EntitySet="Historique_Equipements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Historique_Equipements_Historique_Switcheur" Association="HistoriquesModel.FK_Historique_Equipements_Historique_Switcheur">
+      <End Role="Historique_Switcheur" EntitySet="Historique_Switcheur" />
+      <End Role="Historique_Equipements" EntitySet="Historique_Equipements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Historique_Liaison_Historique_FrameRelay" Association="HistoriquesModel.FK_Historique_Liaison_Historique_FrameRelay">
+      <End Role="Historique_FrameRelay" EntitySet="Historique_FrameRelay" />
+      <End Role="Historique_Liaison" EntitySet="Historique_Liaison" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Historique_Adsl">
+    <Key>
+      <PropertyRef Name="Historique_Adsl1" />
+    </Key>
+    <Property Name="Historique_Adsl1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Historique_Adsl_ID" Type="Int32" Nullable="false" />
+    <Property Name="Historique_Adsl_Statut_Ancien" Type="Int32" />
+    <Property Name="Historique_Adsl_Statut_Nouveau" Type="Int32" />
+    <Property Name="Historique_Adsl_Identificateur_Ancien" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Adsl_Identificateur_Nouveau" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Adsl_Description_Ancien" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Adsl_Description_Nouveau" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Adsl_Date" Type="DateTime" />
+    <Property Name="Historique_Adsl_Personnel" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Historique_Liaison" Relationship="HistoriquesModel.FK_Historique_Liaison_Historique_Adsl" FromRole="Historique_Adsl" ToRole="Historique_Liaison" />
+  </EntityType>
+  <EntityType Name="Historique_Agences">
+    <Key>
+      <PropertyRef Name="Historique_ID" />
+    </Key>
+    <Property Name="Historique_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Historique_Agence_ID" Type="Int32" />
+    <Property Name="Historique_Agence_Emplacement_ancien" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Agence_Emplacement_nouveau" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Agence_Equipements" Type="Int32" />
+    <Property Name="Historique_Agence_Liaisons" Type="Int32" />
+    <Property Name="Historique_Agence_Description_Ancien" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Agence_Description_Nouveau" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Agence_Date" Type="DateTime" />
+    <Property Name="Historique_Personnel" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Historique_Equipements" Relationship="HistoriquesModel.FK_Historique_Agences_Historique_Equipements" FromRole="Historique_Agences" ToRole="Historique_Equipements" />
+    <NavigationProperty Name="Historique_Liaison" Relationship="HistoriquesModel.FK_Historique_Agences_Historique_Liaison" FromRole="Historique_Agences" ToRole="Historique_Liaison" />
+  </EntityType>
+  <EntityType Name="Historique_Equipements">
+    <Key>
+      <PropertyRef Name="Historique_Equipement" />
+    </Key>
+    <Property Name="Historique_Equipement" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Historique_Equipement_ID" Type="Int32" />
+    <Property Name="Historique_Equipement_Routeur" Type="Int32" />
+    <Property Name="Historique_Equipement_Modem" Type="Int32" />
+    <Property Name="Historique_Equipement_Switcheur" Type="Int32" />
+    <Property Name="Historique_Equipement_Description_Ancien" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Equipement_Description_Nouveau" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Equipement_Date" Type="DateTime" />
+    <Property Name="Historique_Equipement_Personnel" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Historique_Agences" Relationship="HistoriquesModel.FK_Historique_Agences_Historique_Equipements" FromRole="Historique_Equipements" ToRole="Historique_Agences" />
+    <NavigationProperty Name="Historique_Modem" Relationship="HistoriquesModel.FK_Historique_Equipements_Historique_Modem" FromRole="Historique_Equipements" ToRole="Historique_Modem" />
+    <NavigationProperty Name="Historique_Routeur" Relationship="HistoriquesModel.FK_Historique_Equipements_Historique_Routeur" FromRole="Historique_Equipements" ToRole="Historique_Routeur" />
+    <NavigationProperty Name="Historique_Switcheur" Relationship="HistoriquesModel.FK_Historique_Equipements_Historique_Switcheur" FromRole="Historique_Equipements" ToRole="Historique_Switcheur" />
+  </EntityType>
+  <EntityType Name="Historique_FrameRelay">
+    <Key>
+      <PropertyRef Name="Historique_Framerelay1" />
+    </Key>
+    <Property Name="Historique_Framerelay1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Historique_Framerelay_ID" Type="Int32" Nullable="false" />
+    <Property Name="Historique_Framerelay_Statut_Ancien" Type="Int32" />
+    <Property Name="Historique_Framerelay_Statut_Nouveau" Type="Int32" />
+    <Property Name="Historique_Framerelay_Identificateur_Ancien" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Framerelay_Identificateur_Nouveau" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Framerelay_Description_Ancien" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Framerelay_Description_Nouveau" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Framerelay_Date" Type="DateTime" />
+    <Property Name="Historique_Framerelay_Personnel" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Historique_Liaison" Relationship="HistoriquesModel.FK_Historique_Liaison_Historique_FrameRelay" FromRole="Historique_FrameRelay" ToRole="Historique_Liaison" />
+  </EntityType>
+  <EntityType Name="Historique_Liaison">
+    <Key>
+      <PropertyRef Name="Historique_Liaison1" />
+    </Key>
+    <Property Name="Historique_Liaison1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Historique_Liaison_ID" Type="Int32" Nullable="false" />
+    <Property Name="Historique_Liaison_Framerelay" Type="Int32" />
+    <Property Name="Historique_Liaison_Adsl" Type="Int32" />
+    <Property Name="Historique_Liaison_Description_Ancien" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Liaison_Description_Nouveau" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Liaison_Date" Type="DateTime" />
+    <Property Name="Historique_Liaison_Personnel" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Historique_Adsl" Relationship="HistoriquesModel.FK_Historique_Liaison_Historique_Adsl" FromRole="Historique_Liaison" ToRole="Historique_Adsl" />
+    <NavigationProperty Name="Historique_Agences" Relationship="HistoriquesModel.FK_Historique_Agences_Historique_Liaison" FromRole="Historique_Liaison" ToRole="Historique_Agences" />
+    <NavigationProperty Name="Historique_FrameRelay" Relationship="HistoriquesModel.FK_Historique_Liaison_Historique_FrameRelay" FromRole="Historique_Liaison" ToRole="Historique_FrameRelay" />
+  </EntityType>
+  <EntityType Name="Historique_Modem">
+    <Key>
+      <PropertyRef Name="Historique_Modem1" />
+    </Key>
+    <Property Name="Historique_Modem1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Historique_Modem_ID" Type="Int32" />
+    <Property Name="Historique_Modem_Statut_ancien" Type="Int32" />
+    <Property Name="Historique_Modem_Statut_Nouveau" Type="Int32" />
+    <Property Name="Historique_Modem_Type_Ancien" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Modem_Type_Nouveau" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Modem_Ip_Ancien" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Modem_Ip_Nouveau" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Modem_Mac_Ancien" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Modem_Mac_Nouveau" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Modem_Description_Ancien" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Modem_Description_Nouveau" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Modem_Date" Type="DateTime" />
+    <Property Name="Historique_Modem_Personnel" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Historique_Equipements" Relationship="HistoriquesModel.FK_Historique_Equipements_Historique_Modem" FromRole="Historique_Modem" ToRole="Historique_Equipements" />
+  </EntityType>
+  <EntityType Name="Historique_Routeur">
+    <Key>
+      <PropertyRef Name="Historique_Routeur1" />
+    </Key>
+    <Property Name="Historique_Routeur1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Historique_Routeur_ID" Type="Int32" Nullable="false" />
+    <Property Name="Historique_Routeur_Statut_ancien" Type="Int32" />
+    <Property Name="Historique_Routeur_Statut_Nouveau" Type="Int32" />
+    <Property Name="Historique_Routeur_Type_Ancien" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Routeur_Type_Nouveau" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Routeur_Ip_Ancien" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Routeur_Ip_Nouveau" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Routeur_Mac_Ancien" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Routeur_Mac_Nouveau" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Routeur_Description_Ancien" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Routeur_Description_Nouveau" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Routeur_Date" Type="DateTime" />
+    <Property Name="Historique_Routeur_Personnel" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Historique_Equipements" Relationship="HistoriquesModel.FK_Historique_Equipements_Historique_Routeur" FromRole="Historique_Routeur" ToRole="Historique_Equipements" />
+  </EntityType>
+  <EntityType Name="Historique_Switcheur">
+    <Key>
+      <PropertyRef Name="Historique_Switcheur1" />
+    </Key>
+    <Property Name="Historique_Switcheur1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Historique_Switcheur_ID" Type="Int32" Nullable="false" />
+    <Property Name="Historique_Switcheur_Statut_ancien" Type="Int32" />
+    <Property Name="Historique_Switcheur_Statut_Nouveau" Type="Int32" />
+    <Property Name="Historique_Switcheur_Type_Ancien" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Switcheur_Type_Nouveau" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Switcheur_Ip_Ancien" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Switcheur_Ip_Nouveau" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Switcheur_Mac_Ancien" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Switcheur_Mac_Nouveau" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Switcheur_Description_Ancien" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Switcheur_Description_Nouveau" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Historique_Switcheur_Date" Type="DateTime" />
+    <Property Name="Historique_Switcheur_Personnel" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Historique_Equipements" Relationship="HistoriquesModel.FK_Historique_Equipements_Historique_Switcheur" FromRole="Historique_Switcheur" ToRole="Historique_Equipements" />
+  </EntityType>
+  <Association Name="FK_Historique_Liaison_Historique_Adsl">
+    <End Role="Historique_Adsl" Type="HistoriquesModel.Historique_Adsl" Multiplicity="0..1" />
+    <End Role="Historique_Liaison" Type="HistoriquesModel.Historique_Liaison" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Historique_Adsl">
+        <PropertyRef Name="Historique_Adsl1" />
+      </Principal>
+      <Dependent Role="Historique_Liaison">
+        <PropertyRef Name="Historique_Liaison_Adsl" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Historique_Agences_Historique_Equipements">
+    <End Role="Historique_Equipements" Type="HistoriquesModel.Historique_Equipements" Multiplicity="0..1" />
+    <End Role="Historique_Agences" Type="HistoriquesModel.Historique_Agences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Historique_Equipements">
+        <PropertyRef Name="Historique_Equipement" />
+      </Principal>
+      <Dependent Role="Historique_Agences">
+        <PropertyRef Name="Historique_Agence_Equipements" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Historique_Agences_Historique_Liaison">
+    <End Role="Historique_Liaison" Type="HistoriquesModel.Historique_Liaison" Multiplicity="0..1" />
+    <End Role="Historique_Agences" Type="HistoriquesModel.Historique_Agences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Historique_Liaison">
+        <PropertyRef Name="Historique_Liaison1" />
+      </Principal>
+      <Dependent Role="Historique_Agences">
+        <PropertyRef Name="Historique_Agence_Liaisons" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Historique_Equipements_Historique_Modem">
+    <End Role="Historique_Modem" Type="HistoriquesModel.Historique_Modem" Multiplicity="0..1" />
+    <End Role="Historique_Equipements" Type="HistoriquesModel.Historique_Equipements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Historique_Modem">
+        <PropertyRef Name="Historique_Modem1" />
+      </Principal>
+      <Dependent Role="Historique_Equipements">
+        <PropertyRef Name="Historique_Equipement_Modem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Historique_Equipements_Historique_Routeur">
+    <End Role="Historique_Routeur" Type="HistoriquesModel.Historique_Routeur" Multiplicity="0..1" />
+    <End Role="Historique_Equipements" Type="HistoriquesModel.Historique_Equipements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Historique_Routeur">
+        <PropertyRef Name="Historique_Routeur1" />
+      </Principal>
+      <Dependent Role="Historique_Equipements">
+        <PropertyRef Name="Historique_Equipement_Routeur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Historique_Equipements_Historique_Switcheur">
+    <End Role="Historique_Switcheur" Type="HistoriquesModel.Historique_Switcheur" Multiplicity="0..1" />
+    <End Role="Historique_Equipements" Type="HistoriquesModel.Historique_Equipements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Historique_Switcheur">
+        <PropertyRef Name="Historique_Switcheur1" />
+      </Principal>
+      <Dependent Role="Historique_Equipements">
+        <PropertyRef Name="Historique_Equipement_Switcheur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Historique_Liaison_Historique_FrameRelay">
+    <End Role="Historique_FrameRelay" Type="HistoriquesModel.Historique_FrameRelay" Multiplicity="0..1" />
+    <End Role="Historique_Liaison" Type="HistoriquesModel.Historique_Liaison" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Historique_FrameRelay">
+        <PropertyRef Name="Historique_Framerelay1" />
+      </Principal>
+      <Dependent Role="Historique_Liaison">
+        <PropertyRef Name="Historique_Liaison_Framerelay" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HistoriquesModelStoreContainer" CdmEntityContainer="HistoriquesEntities">
+    <EntitySetMapping Name="Historique_Adsl">
+      <EntityTypeMapping TypeName="HistoriquesModel.Historique_Adsl">
+        <MappingFragment StoreEntitySet="Historique_Adsl">
+          <ScalarProperty Name="Historique_Adsl1" ColumnName="Historique_Adsl" />
+          <ScalarProperty Name="Historique_Adsl_ID" ColumnName="Historique_Adsl_ID" />
+          <ScalarProperty Name="Historique_Adsl_Statut_Ancien" ColumnName="Historique_Adsl_Statut_Ancien" />
+          <ScalarProperty Name="Historique_Adsl_Statut_Nouveau" ColumnName="Historique_Adsl_Statut_Nouveau" />
+          <ScalarProperty Name="Historique_Adsl_Identificateur_Ancien" ColumnName="Historique_Adsl_Identificateur_Ancien" />
+          <ScalarProperty Name="Historique_Adsl_Identificateur_Nouveau" ColumnName="Historique_Adsl_Identificateur_Nouveau" />
+          <ScalarProperty Name="Historique_Adsl_Description_Ancien" ColumnName="Historique_Adsl_Description_Ancien" />
+          <ScalarProperty Name="Historique_Adsl_Description_Nouveau" ColumnName="Historique_Adsl_Description_Nouveau" />
+          <ScalarProperty Name="Historique_Adsl_Date" ColumnName="Historique_Adsl_Date" />
+          <ScalarProperty Name="Historique_Adsl_Personnel" ColumnName="Historique_Adsl_Personnel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Historique_Agences">
+      <EntityTypeMapping TypeName="HistoriquesModel.Historique_Agences">
+        <MappingFragment StoreEntitySet="Historique_Agences">
+          <ScalarProperty Name="Historique_ID" ColumnName="Historique_ID" />
+          <ScalarProperty Name="Historique_Agence_ID" ColumnName="Historique_Agence_ID" />
+          <ScalarProperty Name="Historique_Agence_Emplacement_ancien" ColumnName="Historique_Agence_Emplacement_ancien" />
+          <ScalarProperty Name="Historique_Agence_Emplacement_nouveau" ColumnName="Historique_Agence_Emplacement_nouveau" />
+          <ScalarProperty Name="Historique_Agence_Equipements" ColumnName="Historique_Agence_Equipements" />
+          <ScalarProperty Name="Historique_Agence_Liaisons" ColumnName="Historique_Agence_Liaisons" />
+          <ScalarProperty Name="Historique_Agence_Description_Ancien" ColumnName="Historique_Agence_Description_Ancien" />
+          <ScalarProperty Name="Historique_Agence_Description_Nouveau" ColumnName="Historique_Agence_Description_Nouveau" />
+          <ScalarProperty Name="Historique_Agence_Date" ColumnName="Historique_Agence_Date" />
+          <ScalarProperty Name="Historique_Personnel" ColumnName="Historique_Personnel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Historique_Equipements">
+      <EntityTypeMapping TypeName="HistoriquesModel.Historique_Equipements">
+        <MappingFragment StoreEntitySet="Historique_Equipements">
+          <ScalarProperty Name="Historique_Equipement" ColumnName="Historique_Equipement" />
+          <ScalarProperty Name="Historique_Equipement_ID" ColumnName="Historique_Equipement_ID" />
+          <ScalarProperty Name="Historique_Equipement_Routeur" ColumnName="Historique_Equipement_Routeur" />
+          <ScalarProperty Name="Historique_Equipement_Modem" ColumnName="Historique_Equipement_Modem" />
+          <ScalarProperty Name="Historique_Equipement_Switcheur" ColumnName="Historique_Equipement_Switcheur" />
+          <ScalarProperty Name="Historique_Equipement_Description_Ancien" ColumnName="Historique_Equipement_Description_Ancien" />
+          <ScalarProperty Name="Historique_Equipement_Description_Nouveau" ColumnName="Historique_Equipement_Description_Nouveau" />
+          <ScalarProperty Name="Historique_Equipement_Date" ColumnName="Historique_Equipement_Date" />
+          <ScalarProperty Name="Historique_Equipement_Personnel" ColumnName="Historique_Equipement_Personnel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Historique_FrameRelay">
+      <EntityTypeMapping TypeName="HistoriquesModel.Historique_FrameRelay">
+        <MappingFragment StoreEntitySet="Historique_FrameRelay">
+          <ScalarProperty Name="Historique_Framerelay1" ColumnName="Historique_Framerelay" />
+          <ScalarProperty Name="Historique_Framerelay_ID" ColumnName="Historique_Framerelay_ID" />
+          <ScalarProperty Name="Historique_Framerelay_Statut_Ancien" ColumnName="Historique_Framerelay_Statut_Ancien" />
+          <ScalarProperty Name="Historique_Framerelay_Statut_Nouveau" ColumnName="Historique_Framerelay_Statut_Nouveau" />
+          <ScalarProperty Name="Historique_Framerelay_Identificateur_Ancien" ColumnName="Historique_Framerelay_Identificateur_Ancien" />
+          <ScalarProperty Name="Historique_Framerelay_Identificateur_Nouveau" ColumnName="Historique_Framerelay_Identificateur_Nouveau" />
+          <ScalarProperty Name="Historique_Framerelay_Description_Ancien" ColumnName="Historique_Framerelay_Description_Ancien" />
+          <ScalarProperty Name="Historique_Framerelay_Description_Nouveau" ColumnName="Historique_Framerelay_Description_Nouveau" />
+          <ScalarProperty Name="Historique_Framerelay_Date" ColumnName="Historique_Framerelay_Date" />
+          <ScalarProperty Name="Historique_Framerelay_Personnel" ColumnName="Historique_Framerelay_Personnel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Historique_Liaison">
+      <EntityTypeMapping TypeName="HistoriquesModel.Historique_Liaison">
+        <MappingFragment StoreEntitySet="Historique_Liaison">
+          <ScalarProperty Name="Historique_Liaison1" ColumnName="Historique_Liaison" />
+          <ScalarProperty Name="Historique_Liaison_ID" ColumnName="Historique_Liaison_ID" />
+          <ScalarProperty Name="Historique_Liaison_Framerelay" ColumnName="Historique_Liaison_Framerelay" />
+          <ScalarProperty Name="Historique_Liaison_Adsl" ColumnName="Historique_Liaison_Adsl" />
+          <ScalarProperty Name="Historique_Liaison_Description_Ancien" ColumnName="Historique_Liaison_Description_Ancien" />
+          <ScalarProperty Name="Historique_Liaison_Description_Nouveau" ColumnName="Historique_Liaison_Description_Nouveau" />
+          <ScalarProperty Name="Historique_Liaison_Date" ColumnName="Historique_Liaison_Date" />
+          <ScalarProperty Name="Historique_Liaison_Personnel" ColumnName="Historique_Liaison_Personnel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Historique_Modem">
+      <EntityTypeMapping TypeName="HistoriquesModel.Historique_Modem">
+        <MappingFragment StoreEntitySet="Historique_Modem">
+          <ScalarProperty Name="Historique_Modem1" ColumnName="Historique_Modem" />
+          <ScalarProperty Name="Historique_Modem_ID" ColumnName="Historique_Modem_ID" />
+          <ScalarProperty Name="Historique_Modem_Statut_ancien" ColumnName="Historique_Modem_Statut_ancien" />
+          <ScalarProperty Name="Historique_Modem_Statut_Nouveau" ColumnName="Historique_Modem_Statut_Nouveau" />
+          <ScalarProperty Name="Historique_Modem_Type_Ancien" ColumnName="Historique_Modem_Type_Ancien" />
+          <ScalarProperty Name="Historique_Modem_Type_Nouveau" ColumnName="Historique_Modem_Type_Nouveau" />
+          <ScalarProperty Name="Historique_Modem_Ip_Ancien" ColumnName="Historique_Modem_Ip_Ancien" />
+          <ScalarProperty Name="Historique_Modem_Ip_Nouveau" ColumnName="Historique_Modem_Ip_Nouveau" />
+          <ScalarProperty Name="Historique_Modem_Mac_Ancien" ColumnName="Historique_Modem_Mac_Ancien" />
+          <ScalarProperty Name="Historique_Modem_Mac_Nouveau" ColumnName="Historique_Modem_Mac_Nouveau" />
+          <ScalarProperty Name="Historique_Modem_Description_Ancien" ColumnName="Historique_Modem_Description_Ancien" />
+          <ScalarProperty Name="Historique_Modem_Description_Nouveau" ColumnName="Historique_Modem_Description_Nouveau" />
+          <ScalarProperty Name="Historique_Modem_Date" ColumnName="Historique_Modem_Date" />
+          <ScalarProperty Name="Historique_Modem_Personnel" ColumnName="Historique_Modem_Personnel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Historique_Routeur">
+      <EntityTypeMapping TypeName="HistoriquesModel.Historique_Routeur">
+        <MappingFragment StoreEntitySet="Historique_Routeur">
+          <ScalarProperty Name="Historique_Routeur1" ColumnName="Historique_Routeur" />
+          <ScalarProperty Name="Historique_Routeur_ID" ColumnName="Historique_Routeur_ID" />
+          <ScalarProperty Name="Historique_Routeur_Statut_ancien" ColumnName="Historique_Routeur_Statut_ancien" />
+          <ScalarProperty Name="Historique_Routeur_Statut_Nouveau" ColumnName="Historique_Routeur_Statut_Nouveau" />
+          <ScalarProperty Name="Historique_Routeur_Type_Ancien" ColumnName="Historique_Routeur_Type_Ancien" />
+          <ScalarProperty Name="Historique_Routeur_Type_Nouveau" ColumnName="Historique_Routeur_Type_Nouveau" />
+          <ScalarProperty Name="Historique_Routeur_Ip_Ancien" ColumnName="Historique_Routeur_Ip_Ancien" />
+          <ScalarProperty Name="Historique_Routeur_Ip_Nouveau" ColumnName="Historique_Routeur_Ip_Nouveau" />
+          <ScalarProperty Name="Historique_Routeur_Mac_Ancien" ColumnName="Historique_Routeur_Mac_Ancien" />
+          <ScalarProperty Name="Historique_Routeur_Mac_Nouveau" ColumnName="Historique_Routeur_Mac_Nouveau" />
+          <ScalarProperty Name="Historique_Routeur_Description_Ancien" ColumnName="Historique_Routeur_Description_Ancien" />
+          <ScalarProperty Name="Historique_Routeur_Description_Nouveau" ColumnName="Historique_Routeur_Description_Nouveau" />
+          <ScalarProperty Name="Historique_Routeur_Date" ColumnName="Historique_Routeur_Date" />
+          <ScalarProperty Name="Historique_Routeur_Personnel" ColumnName="Historique_Routeur_Personnel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Historique_Switcheur">
+      <EntityTypeMapping TypeName="HistoriquesModel.Historique_Switcheur">
+        <MappingFragment StoreEntitySet="Historique_Switcheur">
+          <ScalarProperty Name="Historique_Switcheur1" ColumnName="Historique_Switcheur" />
+          <ScalarProperty Name="Historique_Switcheur_ID" ColumnName="Historique_Switcheur_ID" />
+          <ScalarProperty Name="Historique_Switcheur_Statut_ancien" ColumnName="Historique_Switcheur_Statut_ancien" />
+          <ScalarProperty Name="Historique_Switcheur_Statut_Nouveau" ColumnName="Historique_Switcheur_Statut_Nouveau" />
+          <ScalarProperty Name="Historique_Switcheur_Type_Ancien" ColumnName="Historique_Switcheur_Type_Ancien" />
+          <ScalarProperty Name="Historique_Switcheur_Type_Nouveau" ColumnName="Historique_Switcheur_Type_Nouveau" />
+          <ScalarProperty Name="Historique_Switcheur_Ip_Ancien" ColumnName="Historique_Switcheur_Ip_Ancien" />
+          <ScalarProperty Name="Historique_Switcheur_Ip_Nouveau" ColumnName="Historique_Switcheur_Ip_Nouveau" />
+          <ScalarProperty Name="Historique_Switcheur_Mac_Ancien" ColumnName="Historique_Switcheur_Mac_Ancien" />
+          <ScalarProperty Name="Historique_Switcheur_Mac_Nouveau" ColumnName="Historique_Switcheur_Mac_Nouveau" />
+          <ScalarProperty Name="Historique_Switcheur_Description_Ancien" ColumnName="Historique_Switcheur_Description_Ancien" />
+          <ScalarProperty Name="Historique_Switcheur_Description_Nouveau" ColumnName="Historique_Switcheur_Description_Nouveau" />
+          <ScalarProperty Name="Historique_Switcheur_Date" ColumnName="Historique_Switcheur_Date" />
+          <ScalarProperty Name="Historique_Switcheur_Personnel" ColumnName="Historique_Switcheur_Personnel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

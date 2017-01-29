@@ -1,0 +1,45 @@
+.calque1{
+	opacity: .80;
+	position: absolute;
+	visibility : hidden;
+	padding: 0px;
+	font-family: Courrier;
+	align: center;
+	font-size: 8pt;
+	background-color: transparent;
+	opacity : .75;
+	filter : alpha(opacity=75);
+	top : 46px;
+	left : 799px;
+	width : 395px;
+	height : 192px;
+	margin-right: 6px;
+	margin-top: 0px;
+
+}
+
+.image_calque1{
+	height: 100%;
+}
+
+.window1{
+	background-color: transparent;
+	position: absolute;
+	visibility : hidden;
+	padding: 0px;
+	font-family: Courrier;
+	align: center;
+	font-size: 8pt;
+	top : 47px;
+	left : 822px;
+	width : 400px;
+	height : 221px;
+
+}
+
+.contemp_window1
+{
+	position: absolute;
+	width : 400px;
+	height : 218px;
+}

@@ -1,0 +1,142 @@
+﻿            .leftborder
+            {
+               border-left-style:outset;
+               border-left-color:Black;
+			   border-left-width:thick;
+            }
+             .bottomborder
+            {
+			   border-bottom-color:Black;
+			   border-bottom-style:outset;
+			   border-bottom-width:thick;
+            }
+             .topborder
+            {
+			   border-top-color:Black;
+			   border-top-style:outset;
+			   border-top-width:thick;
+            }
+            .rightandtopborder
+            {
+               border-right-style:outset;
+               border-right-color:Black;
+			   border-right-width:thick;
+			   border-top-color:Black;
+			   border-top-style:outset;
+			   border-top-width:thick;
+            }
+             .leftandtopborder
+            {
+               border-left-style:outset;
+               border-left-color:Black;
+			   border-left-width:thick;
+			   border-top-color:Black;
+			   border-top-style:outset;
+			   border-top-width:thick;
+            }
+            .rightleftandtopborder
+            {
+               border-left-style:outset;
+               border-left-color:Black;
+			   border-left-width:thick;
+			   border-top-color:Black;
+			   border-top-style:outset;
+			   border-top-width:thick;
+			   border-right-style:outset;
+               border-right-color:Black;
+			   border-right-width:thick;
+            }
+            .rightleftandbottomborder
+            {
+               border-left-style:outset;
+               border-left-color:Black;
+			   border-left-width:thick;
+			   border-bottom-color:Black;
+			   border-bottom-style:outset;
+			   border-bottom-width:thick;
+			   border-right-style:outset;
+               border-right-color:Black;
+			   border-right-width:thick;
+            }
+			 .rightborder
+            {
+               border-right-style:outset;
+               border-right-color:Black;
+			   border-right-width:thick;
+            }
+             .leftandbottomborder
+            {
+               border-left-style:outset;
+               border-left-color:Black;
+			   border-left-width:thick;
+			   border-bottom-color:Black;
+			   border-bottom-style:outset;
+			   border-bottom-width:thick;
+            }
+			 .rightandbottomborder
+            {
+               border-right-style:outset;
+               border-right-color:Black;
+			   border-right-width:thick;
+			   border-bottom-color:Black;
+			   border-bottom-style:outset;
+			   border-bottom-width:thick;
+            }
+            .separator
+            {
+             background-color : Black;   
+            }
+            .AjoutWizard
+            {
+    position:absolute;
+    top: 57px;
+    left: 148px;
+    height: 249px;
+    width: 57%;
+}
+.calque1{
+	opacity: .80;
+	position: absolute;
+	visibility : hidden;
+	padding: 0px;
+	font-family: Courrier;
+	align: center;
+	font-size: 8pt;
+	background-color: transparent;
+	opacity : .75;
+	filter : alpha(opacity=75);
+	top : 524px;
+	left : 1px;
+	width : 366px;
+	height : 167px;
+	margin-right: 6px;
+	margin-top: 0px;
+
+}
+
+.image_calque1{
+	height: 100%;
+}
+
+.window1{
+	background-color: transparent;
+	position: absolute;
+	visibility : hidden;
+	padding: 0px;
+	font-family: Courrier;
+	align: center;
+	font-size: 8pt;
+	top : 525px;
+	left : 9px;
+	width : 335px;
+	height : 165px;
+
+}
+
+.contemp_window1
+{
+	position: absolute;
+	width : 315px;
+	height : 154px;
+}
+

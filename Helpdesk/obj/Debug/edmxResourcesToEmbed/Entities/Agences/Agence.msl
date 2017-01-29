@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AgencesModelStoreContainer" CdmEntityContainer="AgenceEntities">
+    <EntitySetMapping Name="Agences">
+      <EntityTypeMapping TypeName="IsTypeOf(AgencesModel.Agences)">
+        <MappingFragment StoreEntitySet="Agences">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Adresse_IP" ColumnName="Adresse_IP" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Zone" ColumnName="Zone" />
+          <ScalarProperty Name="Adresse" ColumnName="Adresse" />
+          <ScalarProperty Name="Responsable" ColumnName="Responsable" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="Equipement_Description" ColumnName="Equipement_Description" />
+          <ScalarProperty Name="Liaison_Description" ColumnName="Liaison_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipement">
+      <EntityTypeMapping TypeName="IsTypeOf(AgencesModel.Equipement)">
+        <MappingFragment StoreEntitySet="Equipement">
+          <ScalarProperty Name="ID_Equipement" ColumnName="ID_Equipement" />
+          <ScalarProperty Name="Agence_ID" ColumnName="Agence_ID" />
+          <ScalarProperty Name="Etat" ColumnName="Etat" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(AgencesModel.Modems)">
+        <MappingFragment StoreEntitySet="Equipement_Modems">
+          <ScalarProperty Name="ID_Equipement" ColumnName="ID_Equipement" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(AgencesModel.Routeurs)">
+        <MappingFragment StoreEntitySet="Equipement_Routeurs">
+          <ScalarProperty Name="ID_Equipement" ColumnName="ID_Equipement" />
+          <ScalarProperty Name="Adresse_IP" ColumnName="Adresse_IP" />
+          <ScalarProperty Name="Adresse_MAC" ColumnName="Adresse_MAC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(AgencesModel.Switchers)">
+        <MappingFragment StoreEntitySet="Equipement_Switchers">
+          <ScalarProperty Name="ID_Equipement" ColumnName="ID_Equipement" />
+          <ScalarProperty Name="Adresse_IP" ColumnName="Adresse_IP" />
+          <ScalarProperty Name="Adresse_MAC" ColumnName="Adresse_MAC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zones">
+      <EntityTypeMapping TypeName="IsTypeOf(AgencesModel.Zones)">
+        <MappingFragment StoreEntitySet="Zones">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Liaison">
+      <EntityTypeMapping TypeName="IsTypeOf(AgencesModel.Liaison)">
+        <MappingFragment StoreEntitySet="Liaison">
+          <ScalarProperty Name="ID_Liaison" ColumnName="ID_Liaison" />
+          <ScalarProperty Name="Etat" ColumnName="Etat" />
+          <ScalarProperty Name="Adresse_IP" ColumnName="Adresse_IP" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Agence_ID" ColumnName="Agence_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(AgencesModel.Adsl)">
+        <MappingFragment StoreEntitySet="Liaison_Adsl">
+          <ScalarProperty Name="ID_Liaison" ColumnName="ID_Liaison" />
+          <ScalarProperty Name="Etat_Carte" ColumnName="Etat_Carte" />
+          <ScalarProperty Name="Adresse_Carte" ColumnName="Adresse_Carte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(AgencesModel.Framerelay)">
+        <MappingFragment StoreEntitySet="Liaison_Framerelay">
+          <ScalarProperty Name="ID_Liaison" ColumnName="ID_Liaison" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Historique_Login">
+      <EntityTypeMapping TypeName="IsTypeOf(AgencesModel.Historique_Login)">
+        <MappingFragment StoreEntitySet="Historique_Login">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_User" ColumnName="ID_User" />
+          <ScalarProperty Name="Hostname" ColumnName="Hostname" />
+          <ScalarProperty Name="IPAdresse" ColumnName="IPAdresse" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Responsables">
+      <EntityTypeMapping TypeName="IsTypeOf(AgencesModel.Responsables)">
+        <MappingFragment StoreEntitySet="Responsables">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Teléphone" ColumnName="Teléphone" />
+          <ScalarProperty Name="Niveau" ColumnName="Niveau" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Historiques_Adsls">
+      <EntityTypeMapping TypeName="IsTypeOf(AgencesModel.Historiques_Adsls)">
+        <MappingFragment StoreEntitySet="Historiques_Adsls">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Adsl_ID" ColumnName="Adsl_ID" />
+          <ScalarProperty Name="Etat_Tunnel" ColumnName="Etat_Tunnel" />
+          <ScalarProperty Name="Etat_Carte" ColumnName="Etat_Carte" />
+          <ScalarProperty Name="Adresse_Tunnel" ColumnName="Adresse_Tunnel" />
+          <ScalarProperty Name="Adresse_Carte" ColumnName="Adresse_Carte" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Personnel" ColumnName="Personnel" />
+          <ScalarProperty Name="Agence_ID" ColumnName="Agence_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Historiques_Agences">
+      <EntityTypeMapping TypeName="IsTypeOf(AgencesModel.Historiques_Agences)">
+        <MappingFragment StoreEntitySet="Historiques_Agences">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Agence_ID" ColumnName="Agence_ID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Adresse_IP" ColumnName="Adresse_IP" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Zone" ColumnName="Zone" />
+          <ScalarProperty Name="Adresse" ColumnName="Adresse" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Equipement_Description" ColumnName="Equipement_Description" />
+          <ScalarProperty Name="Liaison_Description" ColumnName="Liaison_Description" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Personnel" ColumnName="Personnel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Historiques_Framerelays">
+      <EntityTypeMapping TypeName="IsTypeOf(AgencesModel.Historiques_Framerelays)">
+        <MappingFragment StoreEntitySet="Historiques_Framerelays">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Framerelay_ID" ColumnName="Framerelay_ID" />
+          <ScalarProperty Name="Etat" ColumnName="Etat" />
+          <ScalarProperty Name="Adresse_IP" ColumnName="Adresse_IP" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Personnel" ColumnName="Personnel" />
+          <ScalarProperty Name="Agence_ID" ColumnName="Agence_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Historiques_Modems">
+      <EntityTypeMapping TypeName="IsTypeOf(AgencesModel.Historiques_Modems)">
+        <MappingFragment StoreEntitySet="Historiques_Modems">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Modem_ID" ColumnName="Modem_ID" />
+          <ScalarProperty Name="Etat" ColumnName="Etat" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Personnel" ColumnName="Personnel" />
+          <ScalarProperty Name="Agence_ID" ColumnName="Agence_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Historiques_Routeurs">
+      <EntityTypeMapping TypeName="IsTypeOf(AgencesModel.Historiques_Routeurs)">
+        <MappingFragment StoreEntitySet="Historiques_Routeurs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Routeur_ID" ColumnName="Routeur_ID" />
+          <ScalarProperty Name="Etat" ColumnName="Etat" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Adresse_IP" ColumnName="Adresse_IP" />
+          <ScalarProperty Name="Adresse_MAC" ColumnName="Adresse_MAC" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Personnel" ColumnName="Personnel" />
+          <ScalarProperty Name="Agence_ID" ColumnName="Agence_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Historiques_Switcheurs">
+      <EntityTypeMapping TypeName="IsTypeOf(AgencesModel.Historiques_Switcheurs)">
+        <MappingFragment StoreEntitySet="Historiques_Switcheurs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Switcheur_ID" ColumnName="Switcheur_ID" />
+          <ScalarProperty Name="Etat" ColumnName="Etat" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Adresse_IP" ColumnName="Adresse_IP" />
+          <ScalarProperty Name="Adresse_MAC" ColumnName="Adresse_MAC" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Personnel" ColumnName="Personnel" />
+          <ScalarProperty Name="Agence_ID" ColumnName="Agence_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Responsabilité">
+      <EntityTypeMapping TypeName="IsTypeOf(AgencesModel.Responsabilité)">
+        <MappingFragment StoreEntitySet="Responsabilité">
+          <ScalarProperty Name="TimeFin" ColumnName="TimeFin" />
+          <ScalarProperty Name="TimeDebut" ColumnName="TimeDebut" />
+          <ScalarProperty Name="Personnel" ColumnName="Personnel" />
+          <ScalarProperty Name="Agence_ID" ColumnName="Agence_ID" />
+          <ScalarProperty Name="Responsable_ID" ColumnName="Responsable_ID" />
+          <ScalarProperty Name="DateDebut" ColumnName="DateDebut" />
+          <ScalarProperty Name="DateFin" ColumnName="DateFin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

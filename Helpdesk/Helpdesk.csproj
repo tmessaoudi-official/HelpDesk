@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5A197F57-9DB5-4E55-B664-4EAF7158387B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Helpdesk</RootNamespace>
+    <AssemblyName>Helpdesk</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="UsersEntities-Déploiement" Order="1">
+          <Destination Path="" />
+          <Object Type="dbFullSql">
+            <PreSource Path="Data Source=.\SQLEXPRESS%3bAttachDbFilename=|DataDirectory|\Users.mdf%3bIntegrated Security=True%3bUser Instance=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\UsersEntities-Déploiement_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="HistoriquesEntities-Déploiement" Order="2">
+          <Destination Path="" />
+          <Object Type="dbFullSql">
+            <PreSource Path="Data Source=.\SQLEXPRESS%3bAttachDbFilename=|DataDirectory|\Historiques.mdf%3bIntegrated Security=True%3bUser Instance=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\HistoriquesEntities-Déploiement_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="AgenceEntities-Déploiement" Order="3">
+          <Destination Path="" />
+          <Object Type="dbFullSql">
+            <PreSource Path="Data Source=.\SQLEXPRESS%3bAttachDbFilename=|DataDirectory|\Agences.mdf%3bIntegrated Security=True%3bUser Instance=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\AgenceEntities-Déploiement_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.51116.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EO.Web, Version=9.0.37.2, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Dashboard.aspx" />
+    <Content Include="Account\forgot.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Logout.aspx" />
+    <Content Include="Affichage\SupprimeAgence.aspx" />
+    <Content Include="Affichage\Zone.aspx" />
+    <Content Include="Affichage\ZoneAffichage.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Affichage\AfficheAgence.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DemoLoading.aspx" />
+    <Content Include="EditUser.aspx" />
+    <Content Include="Entities\Agences\Agence.edmx.sql" />
+    <Content Include="Historique\AfficheHistorique.aspx" />
+    <Content Include="Historique\AgenceHistorique.aspx" />
+    <Content Include="Affichage\AgencesAffichage.aspx" />
+    <Content Include="App_Data\Agences.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\Agences_log.ldf">
+      <DependentUpon>Agences.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Historique\SupprimeHistoriqueAgence.aspx" />
+    <Content Include="images\Add.png" />
+    <Content Include="images\Affiche.gif" />
+    <Content Include="images\AmenLogo11.jpg" />
+    <Content Include="images\application_side_contract.png" />
+    <Content Include="images\back.png" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\bg.png" />
+    <Content Include="images\Bgb.jpg" />
+    <Content Include="images\blue-item-bg.jpg" />
+    <Content Include="images\Body.gif" />
+    <Content Include="images\calendar.png" />
+    <Content Include="images\cancel.png" />
+    <Content Include="images\close-button.png" />
+    <Content Include="images\cog.png" />
+    <Content Include="images\collapse.jpg" />
+    <Content Include="images\collapse_blue.jpg" />
+    <Content Include="images\down.gif" />
+    <Content Include="images\dt-arrow-dn.png" />
+    <Content Include="images\dt-arrow-up.png" />
+    <Content Include="images\email_link.png" />
+    <Content Include="images\EmptyStar.png" />
+    <Content Include="images\expand.jpg" />
+    <Content Include="images\expand_blue.jpg" />
+    <Content Include="images\FilledStar.png" />
+    <Content Include="images\folder.png" />
+    <Content Include="images\green-item-bg.jpg" />
+    <Content Include="images\group.png" />
+    <Content Include="images\HandleGrip.png" />
+    <Content Include="images\HandleHand.png" />
+    <Content Include="images\History.png" />
+    <Content Include="images\images.jpg" />
+    <Content Include="images\key_go.png" />
+    <Content Include="images\layout.png" />
+    <Content Include="images\layout_add.png" />
+    <Content Include="images\load.gif" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\Logo.html" />
+    <Content Include="images\Logo.png" />
+    <Content Include="images\Logo.swf" />
+    <Content Include="images\logo2.png" />
+    <Content Include="images\magnifier.png" />
+    <Content Include="images\Menu.png" />
+    <Content Include="images\menuitem1.png" />
+    <Content Include="images\menuitem2.png" />
+    <Content Include="images\menuitem3.png" />
+    <Content Include="images\Modif.png" />
+    <Content Include="images\navigation_back.gif" />
+    <Content Include="images\page_add.png" />
+    <Content Include="images\page_delete.png" />
+    <Content Include="images\puce.png" />
+    <Content Include="images\purple-item-bg.jpg" />
+    <Content Include="images\Question.PNG" />
+    <Content Include="images\red-item-bg.jpg" />
+    <Content Include="images\samples_bg.gif" />
+    <Content Include="images\SavedStar.png" />
+    <Content Include="images\securite.jpg" />
+    <Content Include="images\supprim.png" />
+    <Content Include="images\table.png" />
+    <Content Include="images\tag.png" />
+    <Content Include="images\tag_blue.png" />
+    <Content Include="images\up.gif" />
+    <Content Include="images\user_suit.png" />
+    <Content Include="images\world.png" />
+    <Content Include="images\world_delete.png" />
+    <Content Include="images\yellow-item-bg.jpg" />
+    <Content Include="JavaScript\overlayUser.js" />
+    <Content Include="mibbrowser\ireasoning\mibbrowser\audio\alarm.wav" />
+    <Content Include="mibbrowser\ireasoning\mibbrowser\config\licenseTemp.html" />
+    <Content Include="mibbrowser\ireasoning\mibbrowser\config\mibbrowser.xml" />
+    <Content Include="mibbrowser\ireasoning\mibbrowser\config\revokeTemp.html" />
+    <Content Include="mibbrowser\ireasoning\mibbrowser\config\trapd.xml" />
+    <Content Include="mibbrowser\ireasoning\mibbrowser\images\browser.ico" />
+    <Content Include="mibbrowser\ireasoning\mibbrowser\images\browser.png" />
+    <Content Include="mibbrowser\ireasoning\mibbrowser\images\db.ico" />
+    <Content Include="mibbrowser\ireasoning\mibbrowser\images\recycle.ico" />
+    <Content Include="mibbrowser\ireasoning\mibbrowser\lib\browser.jar" />
+    <Content Include="mibbrowser\ireasoning\mibbrowser\lib\browseraux.jar" />
+    <Content Include="mibbrowser\ireasoning\mibbrowser\lib\quaqua.jar" />
+    <Content Include="mibbrowser\ireasoning\mibbrowser\license.txt" />
+    <Content Include="mibbrowser\ireasoning\mibbrowser\README.txt" />
+    <Content Include="mibbrowser\ireasoning\mibbrowser\THIRDPARTYLICENSEREADME.txt" />
+    <Content Include="Recherche\ResultRecherche.aspx" />
+    <Content Include="Recherche\AfficheHistoriqueDate.aspx" />
+    <Content Include="Recherche\RechercheAgence.aspx" />
+    <Content Include="Recherche\RechercheHistorique.aspx" />
+    <Content Include="Styles\Compteinfo.css" />
+    <Content Include="Styles\Default.css" />
+    <Content Include="Styles\Images\cross_icon_normal.png" />
+    <Content Include="Styles\Images\Stage_BG_btm.png" />
+    <Content Include="Styles\Images\titlebar_bg.jpg" />
+    <Content Include="Styles\StyleSheet.css" />
+    <Content Include="Default.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Historique\ZoneHistoriques.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\AmenLogo.jpg" />
+    <Content Include="images\Bground.png" />
+    <Content Include="images\GridSpacer.gif" />
+    <Content Include="images\loginpage_02.jpg" />
+    <Content Include="images\loginpage_03.jpg" />
+    <Content Include="images\loginpage_04.jpg" />
+    <Content Include="images\loginpage_06.jpg" />
+    <Content Include="images\loginpage_07.jpg" />
+    <Content Include="images\loginpage_07_2.jpg" />
+    <Content Include="images\loginpage_08.jpg" />
+    <Content Include="images\loginpage_09.jpg" />
+    <Content Include="images\loginpage_10.jpg" />
+    <Content Include="images\loginpage_11.jpg" />
+    <Content Include="images\loginpage_12.jpg" />
+    <Content Include="images\loginpage_13.jpg" />
+    <Content Include="images\loginpage_14.jpg" />
+    <Content Include="images\msg_button_1.jpg" />
+    <Content Include="images\msg_icon_1.png" />
+    <Content Include="images\msg_title_1.jpg" />
+    <Content Include="images\sprite.png" />
+    <Content Include="Affichage\Insert.aspx" />
+    <Content Include="JavaScript\animated-menu.js" />
+    <Content Include="JavaScript\jquery-1.3.js" />
+    <Content Include="JavaScript\jquery.easing.1.3.js" />
+    <Content Include="JavaScript\overlay.js" />
+    <Content Include="Styles\animated-menu.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\BodyFrame.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\insert.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\main.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\Responsable.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\stylelog.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\Update.css" />
+    <Content Include="Styles\Wizard.css" />
+    <Content Include="Affichage\Update.aspx" />
+    <Content Include="userinfo.aspx" />
+    <Content Include="Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Check.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\forgot.aspx.cs">
+      <DependentUpon>forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\forgot.aspx.designer.cs">
+      <DependentUpon>forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Affichage\SupprimeAgence.aspx.cs">
+      <DependentUpon>SupprimeAgence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Affichage\SupprimeAgence.aspx.designer.cs">
+      <DependentUpon>SupprimeAgence.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Affichage\Zone.aspx.cs">
+      <DependentUpon>Zone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Affichage\Zone.aspx.designer.cs">
+      <DependentUpon>Zone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Affichage\ZoneAffichage.aspx.cs">
+      <DependentUpon>ZoneAffichage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Affichage\ZoneAffichage.aspx.designer.cs">
+      <DependentUpon>ZoneAffichage.aspx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Affichage\AfficheAgence.aspx.cs">
+      <DependentUpon>AfficheAgence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Affichage\AfficheAgence.aspx.designer.cs">
+      <DependentUpon>AfficheAgence.aspx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DemoLoading.aspx.cs">
+      <DependentUpon>DemoLoading.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DemoLoading.aspx.designer.cs">
+      <DependentUpon>DemoLoading.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditUser.aspx.cs">
+      <DependentUpon>EditUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditUser.aspx.designer.cs">
+      <DependentUpon>EditUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Agences\Agence.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Agence.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Historique\AfficheHistorique.aspx.cs">
+      <DependentUpon>AfficheHistorique.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Historique\AfficheHistorique.aspx.designer.cs">
+      <DependentUpon>AfficheHistorique.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Historique\AgenceHistorique.aspx.cs">
+      <DependentUpon>AgenceHistorique.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Historique\AgenceHistorique.aspx.designer.cs">
+      <DependentUpon>AgenceHistorique.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Affichage\AgencesAffichage.aspx.cs">
+      <DependentUpon>AgencesAffichage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Affichage\AgencesAffichage.aspx.designer.cs">
+      <DependentUpon>AgencesAffichage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Historique\SupprimeHistoriqueAgence.aspx.cs">
+      <DependentUpon>SupprimeHistoriqueAgence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Historique\SupprimeHistoriqueAgence.aspx.designer.cs">
+      <DependentUpon>SupprimeHistoriqueAgence.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Old_App_Code\Reseau\Network.cs" />
+    <Compile Include="Recherche\ResultRecherche.aspx.cs">
+      <DependentUpon>ResultRecherche.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recherche\ResultRecherche.aspx.designer.cs">
+      <DependentUpon>ResultRecherche.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Recherche\AfficheHistoriqueDate.aspx.cs">
+      <DependentUpon>AfficheHistoriqueDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recherche\AfficheHistoriqueDate.aspx.designer.cs">
+      <DependentUpon>AfficheHistoriqueDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Recherche\RechercheAgence.aspx.cs">
+      <DependentUpon>RechercheAgence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recherche\RechercheAgence.aspx.designer.cs">
+      <DependentUpon>RechercheAgence.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Recherche\RechercheHistorique.aspx.cs">
+      <DependentUpon>RechercheHistorique.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recherche\RechercheHistorique.aspx.designer.cs">
+      <DependentUpon>RechercheHistorique.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Historique\ZoneHistoriques.aspx.cs">
+      <DependentUpon>ZoneHistoriques.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Historique\ZoneHistoriques.aspx.designer.cs">
+      <DependentUpon>ZoneHistoriques.aspx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Affichage\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Affichage\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Old_App_Code\Databases\Scripts.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Old_App_Code\Encryption\AESEncryption.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Old_App_Code\Encryption\DESEncryption.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Old_App_Code\Mail\Scripts.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Old_App_Code\MessageBox.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Old_App_Code\MessageBoxButton.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Old_App_Code\Utilites.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Affichage\Update.aspx.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Affichage\Update.aspx.designer.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userinfo.aspx.cs">
+      <DependentUpon>userinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userinfo.aspx.designer.cs">
+      <DependentUpon>userinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Check.aspx.cs">
+      <DependentUpon>Check.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Check.aspx.designer.cs">
+      <DependentUpon>Check.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Entities\Agences\Agence.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Agence.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="images\bg.psd" />
+    <None Include="images\Logo.fla" />
+    <None Include="images\Thumbs.db" />
+    <None Include="mibbrowser\ireasoning\mibbrowser\bin\browser.bat" />
+    <None Include="mibbrowser\ireasoning\mibbrowser\bin\graph.bat" />
+    <None Include="mibbrowser\ireasoning\mibbrowser\bin\snmpget.bat" />
+    <None Include="mibbrowser\ireasoning\mibbrowser\bin\snmpgetnext.bat" />
+    <None Include="mibbrowser\ireasoning\mibbrowser\bin\snmpset.bat" />
+    <None Include="mibbrowser\ireasoning\mibbrowser\bin\snmpwalk.bat" />
+    <None Include="mibbrowser\ireasoning\mibbrowser\bin\trapd.bat" />
+    <None Include="mibbrowser\ireasoning\mibbrowser\browser.app\Contents\Info.plist" />
+    <None Include="mibbrowser\ireasoning\mibbrowser\browser.app\Contents\MacOS\JavaApplicationStub" />
+    <None Include="mibbrowser\ireasoning\mibbrowser\browser.app\Contents\PkgInfo" />
+    <None Include="mibbrowser\ireasoning\mibbrowser\browser.app\Contents\Resources\GenericJavaApp.icns" />
+    <None Include="mibbrowser\ireasoning\mibbrowser\browser.command" />
+    <None Include="mibbrowser\ireasoning\mibbrowser\browser.sh" />
+    <None Include="mibbrowser\ireasoning\mibbrowser\config\panel.properties" />
+    <None Include="mibbrowser\ireasoning\mibbrowser\docs\help.pdf" />
+    <None Include="mibbrowser\ireasoning\mibbrowser\lib\runserver.sh" />
+    <None Include="mibbrowser\ireasoning\mibbrowser\trapd.sh" />
+    <None Include="Old_App_Code\msgbox.tpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="mibbrowser\ireasoning\mibbrowser\browser.app\Contents\Resources\Java\" />
+    <Folder Include="mibbrowser\ireasoning\mibbrowser\lib\browser\com\a\a\" />
+    <Folder Include="mibbrowser\ireasoning\mibbrowser\lib\browser\com\a\b\" />
+    <Folder Include="mibbrowser\ireasoning\mibbrowser\lib\browser\com\ireasoning\a\a\" />
+    <Folder Include="mibbrowser\ireasoning\mibbrowser\lib\browser\com\ireasoning\a\b\" />
+    <Folder Include="mibbrowser\ireasoning\mibbrowser\lib\browser\com\ireasoning\a\c\" />
+    <Folder Include="mibbrowser\ireasoning\mibbrowser\lib\browser\images\snapshot\" />
+    <Folder Include="mibbrowser\ireasoning\mibbrowser\lib\browser\META-INF\" />
+    <Folder Include="mibbrowser\ireasoning\mibbrowser\log\" />
+    <Folder Include="mibbrowser\ireasoning\mibbrowser\mibs\" />
+    <Folder Include="mibbrowser\ireasoning\mibbrowser\temp\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50032</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

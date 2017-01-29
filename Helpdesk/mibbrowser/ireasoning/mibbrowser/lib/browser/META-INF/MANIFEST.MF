@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Created-By: iReasoning Inc.
+Main-Class: MibBrowser
+Class-Path: browseraux.jar mail.jar derby.jar xstream.jar commons-http
+ client-3.1.jar commons-logging-1.1.1.jar commons-codec-1.3.jar quaqua
+ .jar
+
+Name: MibBrowser.class
+Sealed: false
+
+

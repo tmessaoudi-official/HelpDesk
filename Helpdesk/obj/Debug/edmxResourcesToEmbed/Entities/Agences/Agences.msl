@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AgencesModelStoreContainer" CdmEntityContainer="AgencesEntities">
+    <EntitySetMapping Name="Adsl">
+      <EntityTypeMapping TypeName="AgencesModel.Adsl">
+        <MappingFragment StoreEntitySet="Adsl">
+          <ScalarProperty Name="Adsl_ID" ColumnName="Adsl_ID" />
+          <ScalarProperty Name="Adsl_Statut" ColumnName="Adsl_Statut" />
+          <ScalarProperty Name="Adsl_Identificateur" ColumnName="Adsl_Identificateur" />
+          <ScalarProperty Name="Adsl_Description" ColumnName="Adsl_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Agences">
+      <EntityTypeMapping TypeName="AgencesModel.Agences">
+        <MappingFragment StoreEntitySet="Agences">
+          <ScalarProperty Name="Agence_ID" ColumnName="Agence_ID" />
+          <ScalarProperty Name="Agence_Emplacement" ColumnName="Agence_Emplacement" />
+          <ScalarProperty Name="Agence_Coordonnee_Responsable" ColumnName="Agence_Coordonnee_Responsable" />
+          <ScalarProperty Name="Agence_Equipements" ColumnName="Agence_Equipements" />
+          <ScalarProperty Name="Agence_Liaisons" ColumnName="Agence_Liaisons" />
+          <ScalarProperty Name="Agence_Descriptions" ColumnName="Agence_Descriptions" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Emplcament">
+      <EntityTypeMapping TypeName="AgencesModel.Emplcament">
+        <MappingFragment StoreEntitySet="Emplcament">
+          <ScalarProperty Name="Emplacement_ID" ColumnName="Emplacement_ID" />
+          <ScalarProperty Name="Emplacement_Libelle" ColumnName="Emplacement_Libelle" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Emplacement_Description" ColumnName="Emplacement_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipements">
+      <EntityTypeMapping TypeName="AgencesModel.Equipements">
+        <MappingFragment StoreEntitySet="Equipements">
+          <ScalarProperty Name="Equipement_ID" ColumnName="Equipement_ID" />
+          <ScalarProperty Name="Equipement_Routeur" ColumnName="Equipement_Routeur" />
+          <ScalarProperty Name="Equipement_Modem" ColumnName="Equipement_Modem" />
+          <ScalarProperty Name="Equipement_Switcheur" ColumnName="Equipement_Switcheur" />
+          <ScalarProperty Name="Equipement_Description" ColumnName="Equipement_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Framerelay">
+      <EntityTypeMapping TypeName="AgencesModel.Framerelay">
+        <MappingFragment StoreEntitySet="Framerelay">
+          <ScalarProperty Name="Framerelay_ID" ColumnName="Framerelay_ID" />
+          <ScalarProperty Name="Framerelay_Statut" ColumnName="Framerelay_Statut" />
+          <ScalarProperty Name="Framerelay_Identificateur" ColumnName="Framerelay_Identificateur" />
+          <ScalarProperty Name="Framerelay_Description" ColumnName="Framerelay_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Liaisons">
+      <EntityTypeMapping TypeName="AgencesModel.Liaisons">
+        <MappingFragment StoreEntitySet="Liaisons">
+          <ScalarProperty Name="Liaison_ID" ColumnName="Liaison_ID" />
+          <ScalarProperty Name="Liaison_Framerelay" ColumnName="Liaison_Framerelay" />
+          <ScalarProperty Name="Liaison_Adsl" ColumnName="Liaison_Adsl" />
+          <ScalarProperty Name="Liaison_Description" ColumnName="Liaison_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modems">
+      <EntityTypeMapping TypeName="AgencesModel.Modems">
+        <MappingFragment StoreEntitySet="Modems">
+          <ScalarProperty Name="Modem_ID" ColumnName="Modem_ID" />
+          <ScalarProperty Name="Modem_Statut" ColumnName="Modem_Statut" />
+          <ScalarProperty Name="Modem_Type" ColumnName="Modem_Type" />
+          <ScalarProperty Name="Modem_IPadress" ColumnName="Modem_IPadress" />
+          <ScalarProperty Name="Modem_Macadress" ColumnName="Modem_Macadress" />
+          <ScalarProperty Name="Modem_Description" ColumnName="Modem_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Respnosable_Agence">
+      <EntityTypeMapping TypeName="AgencesModel.Respnosable_Agence">
+        <MappingFragment StoreEntitySet="Respnosable_Agence">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Teléphone" ColumnName="Teléphone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Routeurs">
+      <EntityTypeMapping TypeName="AgencesModel.Routeurs">
+        <MappingFragment StoreEntitySet="Routeurs">
+          <ScalarProperty Name="Routeur_ID" ColumnName="Routeur_ID" />
+          <ScalarProperty Name="Routeur_Statut" ColumnName="Routeur_Statut" />
+          <ScalarProperty Name="Routeur_Type" ColumnName="Routeur_Type" />
+          <ScalarProperty Name="Routeur_IPadress" ColumnName="Routeur_IPadress" />
+          <ScalarProperty Name="Routeur_Macadress" ColumnName="Routeur_Macadress" />
+          <ScalarProperty Name="Routeur_Description" ColumnName="Routeur_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Switcheurs">
+      <EntityTypeMapping TypeName="AgencesModel.Switcheurs">
+        <MappingFragment StoreEntitySet="Switcheurs">
+          <ScalarProperty Name="Switcheur_ID" ColumnName="Switcheur_ID" />
+          <ScalarProperty Name="Switcheur_Statut" ColumnName="Switcheur_Statut" />
+          <ScalarProperty Name="Switcheur_Type" ColumnName="Switcheur_Type" />
+          <ScalarProperty Name="Switcheur_IPadress" ColumnName="Switcheur_IPadress" />
+          <ScalarProperty Name="Switcheur_Macadress" ColumnName="Switcheur_Macadress" />
+          <ScalarProperty Name="Switcheur_Description" ColumnName="Switcheur_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
